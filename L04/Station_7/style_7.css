@@ -1,0 +1,55 @@
+.karte{
+    position: fixed;
+    margin: 100px 360px 100px 360px;
+}
+
+.video{
+    position: absolute;
+    top: 135px;
+    left: 690px;
+    z-index: 1;
+}
+
+.textueberschrift{
+    padding: 0 200px 0 50px;
+    margin-top: -220px;
+    color: white;
+}
+
+.text{
+    color: white;
+    padding-left: 50px;
+    z-index: 3;
+}
+
+.gifts{
+    position:absolute;
+    top: 390px;
+    left: 750px;
+    z-index: 2;
+}
+
+.plants{
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+.stern1{
+    position:absolute;
+    top: 200px;
+    left: 450px;
+}
+
+.stern2{
+    position: absolute;
+    top: 150px;
+    left: 600px;
+}
+
+.stern3{
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    z-index: 3;
+}

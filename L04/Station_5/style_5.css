@@ -1,0 +1,23 @@
+.karte{
+    position: fixed;
+    margin: 100px 360px 100px 360px;
+}
+
+.textueberschrift{
+    position: absolute;
+    top:50px;
+    left:50px;
+    color: white;
+}
+
+.formular{
+    position: absolute;
+    top: 230px;
+    left: 420px;
+    color: white;
+}
+
+input [type="radio"] {
+    display: none;
+}
+

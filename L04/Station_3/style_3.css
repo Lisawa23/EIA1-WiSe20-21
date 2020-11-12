@@ -1,0 +1,50 @@
+.karte{
+    position: fixed;
+    margin: 100px 360px 100px 360px;
+}
+
+.textueberschrift{
+    padding: 0 200px 0 50px;
+    margin-top: -350px;
+    color: white;
+}
+
+.stern1{
+    position: absolute;
+    top: 320px;
+    left: 420px;
+}
+
+.stern1:hover{
+    background-image: url(../../L04/Station_3/Images3/stern_hover.png);
+}
+
+.stern2{
+   position: absolute;
+   top: 250px;
+   left: 510px;
+}
+
+.stern2:hover{
+    background-image: url(../../L04/Station_3/Images3/stern_hover.png);
+}
+
+.stern3{
+   position: absolute;
+   top: 380px;
+   left: 620px;
+}
+
+.stern3:hover{
+    background-image: url(../../L04/Station_3/Images3/stern_hover.png);
+}
+
+.stern4{
+   position: absolute;
+   top: 310px;
+   left: 785px;
+}
+
+.stern4:hover{
+    background-image: url(../../L04/Station_3/Images3/stern_hover.png);
+}

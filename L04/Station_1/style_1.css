@@ -1,0 +1,27 @@
+.karte{
+    position: absolute;
+    margin: 100px 360px 100px 360px;
+}
+
+.textueberschrift{
+    padding: 0 200px 0 50px;
+    margin-top: -350px;
+    color: white;
+}
+
+.text{
+    padding: 0 200px 0 50px;
+    margin-top: 80px;
+    line-height: 12px;
+    color: white;
+}
+
+.busch{
+    position: relative;
+    margin: 40px 0 0 270px;
+}
+
+.pinguin{
+    position: relative;
+    margin: 110px 0 0 830px;
+}
