@@ -1,27 +1,39 @@
-.karte{
-    position: absolute;
-    margin: 100px 360px 100px 360px;
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .textueberschrift{
-    padding: 0 200px 0 50px;
-    margin-top: -350px;
+    position: absolute;
+    top: 160px;
+    left: 440px;
     color: white;
+    font-size: 30px;
 }
 
 .text{
-    padding: 0 200px 0 50px;
-    margin-top: 80px;
+    position: absolute;
+    top: 280px;
+    left: 440px;
     line-height: 12px;
     color: white;
+    font-size: 15px;
 }
 
 .busch{
-    position: relative;
-    margin: 40px 0 0 270px;
+    position: absolute;
+    top: 60px;
+    left: 300px;
 }
 
 .pinguin{
-    position: relative;
-    margin: 110px 0 0 830px;
+    position: absolute;
+    top: 330px;
+    left: 850px;
 }
