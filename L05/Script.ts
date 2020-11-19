@@ -30,37 +30,37 @@ var Australia2018: number=2100.5
 
 //Africa
 var Africaprozent: number=((Africa2018/Gesamtemission)*100)
-var Africavergleich: number=((Africa2018/Africa2008)*100)
+var Africavergleich: number=(((Africa2018/Africa2008)-1)*100)
 var Africavergleich2: number=(Africa2018-Africa2008)
 
 //SouthAmerica
 var SouthAmericaprozent: number=((SouthAmerica2018/Gesamtemission)*100)
-var SouthAmericavergleich: number=((SouthAmerica2018/SouthAmerica2008)*100)
+var SouthAmericavergleich: number=(((SouthAmerica2018/SouthAmerica2008)-1)*100)
 var SouthAmericavergleich2: number=(SouthAmerica2018-SouthAmerica2008)
 
 //Europe
 var Europeprozent: number=((Europe2018/Gesamtemission)*100)
-var Europevergleich: number=((Europe2018/Europe2008)*100)
+var Europevergleich: number=(((Europe2018/Europe2008)-1)*100)
 var Europevergleich2: number=(Europe2018-Europe2008)
 
 //NorthAmerica
 var NorthAmericaprozent: number=((NorthAmerica2018/Gesamtemission)*100)
-var NorthAmericavergleich: number=((NorthAmerica2018/NorthAmerica2008)*100)
+var NorthAmericavergleich: number=(((NorthAmerica2018/NorthAmerica2008)-1)*100)
 var NorthAmericavergleich2: number=(NorthAmerica2018-NorthAmerica2008)
 
 //Asia
 var Asiaprozent: number=((Asia2018/Gesamtemission)*100)
-var Asiavergleich: number=((Asia2018/Asia2008)*100)
+var Asiavergleich: number=(((Asia2018/Asia2008)-1)*100)
 var Asiavergleich2: number=(Asia2018-Asia2008)
 
 //Australia
 var Australiaprozent: number=((Australia2018/Gesamtemission)*100)
-var Australiavergleich: number=((Australia2018/Australia2008)*100)
+var Australiavergleich: number=(((Australia2018/Australia2008)-1)*100)
 var Australiavergleich2: number=(Australia2018-Australia2008)
 
 
 //Gesamtemission
-var Gesamtemission: number=(Africa2018 + SouthAmerica2018 +  Europe2018 + NorthAmerica2018 + Asia2018 + Australia2018)
+var Gesamtemission: number=(Africa2018+SouthAmerica2018+Europe2018+NorthAmerica2018+Asia2018+Australia2018)
 
 
 

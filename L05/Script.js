@@ -20,27 +20,27 @@ var Australia2018 = 2100.5;
 //Rechnungen
 //Africa
 var Africaprozent = ((Africa2018 / Gesamtemission) * 100);
-var Africavergleich = ((Africa2018 / Africa2008) * 100);
+var Africavergleich = (((Africa2018 / Africa2008) - 1) * 100);
 var Africavergleich2 = (Africa2018 - Africa2008);
 //SouthAmerica
 var SouthAmericaprozent = ((SouthAmerica2018 / Gesamtemission) * 100);
-var SouthAmericavergleich = ((SouthAmerica2018 / SouthAmerica2008) * 100);
+var SouthAmericavergleich = (((SouthAmerica2018 / SouthAmerica2008) - 1) * 100);
 var SouthAmericavergleich2 = (SouthAmerica2018 - SouthAmerica2008);
 //Europe
 var Europeprozent = ((Europe2018 / Gesamtemission) * 100);
-var Europevergleich = ((Europe2018 / Europe2008) * 100);
+var Europevergleich = (((Europe2018 / Europe2008) - 1) * 100);
 var Europevergleich2 = (Europe2018 - Europe2008);
 //NorthAmerica
 var NorthAmericaprozent = ((NorthAmerica2018 / Gesamtemission) * 100);
-var NorthAmericavergleich = ((NorthAmerica2018 / NorthAmerica2008) * 100);
+var NorthAmericavergleich = (((NorthAmerica2018 / NorthAmerica2008) - 1) * 100);
 var NorthAmericavergleich2 = (NorthAmerica2018 - NorthAmerica2008);
 //Asia
 var Asiaprozent = ((Asia2018 / Gesamtemission) * 100);
-var Asiavergleich = ((Asia2018 / Asia2008) * 100);
+var Asiavergleich = (((Asia2018 / Asia2008) - 1) * 100);
 var Asiavergleich2 = (Asia2018 - Asia2008);
 //Australia
 var Australiaprozent = ((Australia2018 / Gesamtemission) * 100);
-var Australiavergleich = ((Australia2018 / Australia2008) * 100);
+var Australiavergleich = (((Australia2018 / Australia2008) - 1) * 100);
 var Australiavergleich2 = (Australia2018 - Australia2008);
 //Gesamtemission
 var Gesamtemission = (Africa2018 + SouthAmerica2018 + Europe2018 + NorthAmerica2018 + Asia2018 + Australia2018);
