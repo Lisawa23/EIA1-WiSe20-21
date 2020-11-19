@@ -1,3 +1,7 @@
+//Gesamtemission
+var Gesamtemission: number=(Africa2018+SouthAmerica2018+Europe2018+NorthAmerica2018+Asia2018+Australia2018)
+
+
 //Emissionswerte
 
 //Africa
@@ -57,11 +61,6 @@ var Asiavergleich2: number=(Asia2018-Asia2008)
 var Australiaprozent: number=((Australia2018/Gesamtemission)*100)
 var Australiavergleich: number=(((Australia2018/Australia2008)-1)*100)
 var Australiavergleich2: number=(Australia2018-Australia2008)
-
-
-//Gesamtemission
-var Gesamtemission: number=(Africa2018+SouthAmerica2018+Europe2018+NorthAmerica2018+Asia2018+Australia2018)
-
 
 
 //Konsolenausgabe

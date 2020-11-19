@@ -1,3 +1,5 @@
+//Gesamtemission
+var Gesamtemission = (Africa2018 + SouthAmerica2018 + Europe2018 + NorthAmerica2018 + Asia2018 + Australia2018);
 //Emissionswerte
 //Africa
 var Africa2008 = 1028;
@@ -42,8 +44,6 @@ var Asiavergleich2 = (Asia2018 - Asia2008);
 var Australiaprozent = ((Australia2018 / Gesamtemission) * 100);
 var Australiavergleich = (((Australia2018 / Australia2008) - 1) * 100);
 var Australiavergleich2 = (Australia2018 - Australia2008);
-//Gesamtemission
-var Gesamtemission = (Africa2018 + SouthAmerica2018 + Europe2018 + NorthAmerica2018 + Asia2018 + Australia2018);
 //Konsolenausgabe
 //Africa
 console.log("Die Emission von Afrika im Jahr 2018 ist: " + Africa2018 + " kg CO2.");
