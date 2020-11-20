@@ -51,7 +51,6 @@ console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + Afr
 console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um " + Africavergleich + " % verändert.");
 console.log("2018 im Vergleich zu 2008 sind das " + Africavergleich2 + " kg CO2.");
 console.log("");
-console.log("");
 //SouthAmerika
 console.log("Die Emission von Südamerika im Jahr 2018 ist: " + SouthAmerica2018 + " kg CO2.");
 console.log("Relativ zur Gesamtemission der Welt verursacht Südamerika damit " + SouthAmericaprozent + " %.");
