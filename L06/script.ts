@@ -71,6 +71,8 @@ function africa(){
     document.querySelector(".ueberschrift2").innerHTML = Africaprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = Africavergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = Africavergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = Africa2018 +"";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Africaprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".africa").addEventListener("click", africa)
@@ -84,6 +86,8 @@ function southamerica(){
     document.querySelector(".ueberschrift2").innerHTML = SouthAmericaprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = SouthAmericavergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = SouthAmericavergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = SouthAmerica2018 +"";
+    document.querySelector(".chart").setAttribute('style', 'height:' + SouthAmericaprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".southamerica").addEventListener("click", southamerica)
@@ -96,6 +100,8 @@ function europe(){
     document.querySelector(".ueberschrift2").innerHTML = Europeprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = Europevergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = Europevergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = Europe2018 +"";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Europeprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".europe").addEventListener("click", europe)
@@ -108,6 +114,8 @@ function northamerica(){
     document.querySelector(".ueberschrift2").innerHTML = NorthAmericaprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = NorthAmericavergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = NorthAmericavergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = NorthAmerica2018 +"";
+    document.querySelector(".chart").setAttribute('style', 'height:' + NorthAmericaprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".northamerica").addEventListener("click", northamerica)
@@ -120,6 +128,8 @@ function asia(){
     document.querySelector(".ueberschrift2").innerHTML = Asiaprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = Asiavergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = Asiavergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = Asia2018 +"";
+    document.querySelector(".chart").setAttribute('style', 'height:' + Asiaprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".asia").addEventListener("click", asia)
@@ -132,9 +142,14 @@ function australia(){
     document.querySelector(".ueberschrift2").innerHTML = Australiaprozent.toFixed(2) + "%";
     document.querySelector(".ueberschrift3").innerHTML = Australiavergleich.toFixed(2) + "%";
     document.querySelector(".ueberschrift4").innerHTML = Australiavergleich2.toFixed(2) +"";
+    document.querySelector(".chart").innerHTML = Australia2018 +"";
+    document.querySelector(".chart").setAttribute('style','height:' + Australiaprozent + '%');
 }
 window.addEventListener("load", function(){
     document.querySelector(".australia").addEventListener("click", australia)
 })
-
 }
+
+
+
+
