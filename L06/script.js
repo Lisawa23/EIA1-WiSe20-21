@@ -31,6 +31,7 @@ var L06;
         document.querySelector("#ueberschrift4").innerHTML = (newValue - oldValue).toFixed(2) + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + ((newValue / Gesamtemission) * 100) + '%');
     }
+    //EventListener
     document.querySelector("#africa").addEventListener('click', function () {
         ChangeCountry("Africa", Africa2018, Africa2008);
     });

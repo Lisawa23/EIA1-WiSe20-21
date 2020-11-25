@@ -40,6 +40,7 @@ function ChangeCountry(continent: string, newValue: number, oldValue: number){
     document.querySelector(".chart").setAttribute('style', 'height:' + ((newValue/Gesamtemission)*100) + '%');
 }
 
+//EventListener
 document.querySelector("#africa").addEventListener('click', function(){
     ChangeCountry("Africa", Africa2018, Africa2008);
 })
