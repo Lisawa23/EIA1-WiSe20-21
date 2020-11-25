@@ -53,8 +53,8 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = Africaprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = Africavergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = Africavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = Africa2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + Africaprozent + '%');
+        //document.querySelector("aktuelleElement").setAttribute('class', 'region1');
     }
     window.addEventListener("load", function () {
         document.querySelector(".africa").addEventListener("click", africa);
@@ -66,7 +66,6 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = SouthAmericaprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = SouthAmericavergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = SouthAmericavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = SouthAmerica2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + SouthAmericaprozent + '%');
     }
     window.addEventListener("load", function () {
@@ -79,7 +78,6 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = Europeprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = Europevergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = Europevergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = Europe2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + Europeprozent + '%');
     }
     window.addEventListener("load", function () {
@@ -92,7 +90,6 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = NorthAmericaprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = NorthAmericavergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = NorthAmericavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = NorthAmerica2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + NorthAmericaprozent + '%');
     }
     window.addEventListener("load", function () {
@@ -105,7 +102,6 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = Asiaprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = Asiavergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = Asiavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = Asia2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + Asiaprozent + '%');
     }
     window.addEventListener("load", function () {
@@ -118,7 +114,6 @@ var L06;
         document.querySelector(".ueberschrift2").innerHTML = Australiaprozent.toFixed(2) + "%";
         document.querySelector(".ueberschrift3").innerHTML = Australiavergleich.toFixed(2) + "%";
         document.querySelector(".ueberschrift4").innerHTML = Australiavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").innerHTML = Australia2018 + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + Australiaprozent + '%');
     }
     window.addEventListener("load", function () {
