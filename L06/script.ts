@@ -10,8 +10,8 @@ const SouthAmerica2008: number=1132.6
 const SouthAmerica2018: number=1261.5
 
 //Europe
-var Europe2008: number=4965.7
-var Europe2018: number=4209.3
+const Europe2008: number=4965.7
+const Europe2018: number=4209.3
 
 //NorthAmerica
 const NorthAmerica2008: number=6600.4
