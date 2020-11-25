@@ -21,103 +21,33 @@ var L06;
     var Australia2018 = 2100.5;
     //Gesamtemission
     var Gesamtemission = (Africa2018 + SouthAmerica2018 + Europe2018 + NorthAmerica2018 + Asia2018 + Australia2018);
-    //Rechnungen
-    //Africa
-    var Africaprozent = ((Africa2018 / Gesamtemission) * 100);
-    var Africavergleich = (((Africa2018 / Africa2008) - 1) * 100);
-    var Africavergleich2 = (Africa2018 - Africa2008);
-    //SouthAmerica
-    var SouthAmericaprozent = ((SouthAmerica2018 / Gesamtemission) * 100);
-    var SouthAmericavergleich = (((SouthAmerica2018 / SouthAmerica2008) - 1) * 100);
-    var SouthAmericavergleich2 = (SouthAmerica2018 - SouthAmerica2008);
-    //Europe
-    var Europeprozent = ((Europe2018 / Gesamtemission) * 100);
-    var Europevergleich = (((Europe2018 / Europe2008) - 1) * 100);
-    var Europevergleich2 = (Europe2018 - Europe2008);
-    //NorthAmerica
-    var NorthAmericaprozent = ((NorthAmerica2018 / Gesamtemission) * 100);
-    var NorthAmericavergleich = (((NorthAmerica2018 / NorthAmerica2008) - 1) * 100);
-    var NorthAmericavergleich2 = (NorthAmerica2018 - NorthAmerica2008);
-    //Asia
-    var Asiaprozent = ((Asia2018 / Gesamtemission) * 100);
-    var Asiavergleich = (((Asia2018 / Asia2008) - 1) * 100);
-    var Asiavergleich2 = (Asia2018 - Asia2008);
-    //Australia
-    var Australiaprozent = ((Australia2018 / Gesamtemission) * 100);
-    var Australiavergleich = (((Australia2018 / Australia2008) - 1) * 100);
-    var Australiavergleich2 = (Australia2018 - Australia2008);
-    //Africa
-    function africa() {
-        document.querySelector("#titleRegion").innerHTML = "Africa";
-        document.querySelector(".ueberschrift1").innerHTML = Africa2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = Africaprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = Africavergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = Africavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + Africaprozent + '%');
-        //document.querySelector("aktuelleElement").setAttribute('class', 'region1');
+    //Funktion
+    function ChangeCountry(continent, newValue, oldValue) {
+        document.querySelector("#titleRegion").innerHTML = continent;
+        document.querySelector(".titleRegion").innerHTML = "Emission absolute of " + continent + " in 2018";
+        document.querySelector("#ueberschrift1").innerHTML = newValue.toFixed(2);
+        document.querySelector("#ueberschrift2").innerHTML = ((newValue / Gesamtemission) * 100).toFixed(2) + "%";
+        document.querySelector("#ueberschrift3").innerHTML = (((newValue / oldValue) - 1) * 100).toFixed(2) + "%";
+        document.querySelector("#ueberschrift4").innerHTML = (newValue - oldValue).toFixed(2) + "";
+        document.querySelector(".chart").setAttribute('style', 'height:' + ((newValue / Gesamtemission) * 100) + '%');
     }
-    window.addEventListener("load", function () {
-        document.querySelector(".africa").addEventListener("click", africa);
+    document.querySelector("#africa").addEventListener('click', function () {
+        ChangeCountry("Africa", Africa2018, Africa2008);
     });
-    //SouthAmerica
-    function southamerica() {
-        document.querySelector("#titleRegion").innerHTML = "South America";
-        document.querySelector(".ueberschrift1").innerHTML = SouthAmerica2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = SouthAmericaprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = SouthAmericavergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = SouthAmericavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + SouthAmericaprozent + '%');
-    }
-    window.addEventListener("load", function () {
-        document.querySelector(".southamerica").addEventListener("click", southamerica);
+    document.querySelector("#southamerica").addEventListener('click', function () {
+        ChangeCountry("South America", SouthAmerica2018, SouthAmerica2008);
     });
-    //Europa
-    function europe() {
-        document.querySelector("#titleRegion").innerHTML = "Europe";
-        document.querySelector(".ueberschrift1").innerHTML = Europe2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = Europeprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = Europevergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = Europevergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + Europeprozent + '%');
-    }
-    window.addEventListener("load", function () {
-        document.querySelector(".europe").addEventListener("click", europe);
+    document.querySelector("#europe").addEventListener('click', function () {
+        ChangeCountry("Europe", Europe2018, Europe2008);
     });
-    //NorthAmerica
-    function northamerica() {
-        document.querySelector("#titleRegion").innerHTML = "North America";
-        document.querySelector(".ueberschrift1").innerHTML = NorthAmerica2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = NorthAmericaprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = NorthAmericavergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = NorthAmericavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + NorthAmericaprozent + '%');
-    }
-    window.addEventListener("load", function () {
-        document.querySelector(".northamerica").addEventListener("click", northamerica);
+    document.querySelector("#northamerica").addEventListener('click', function () {
+        ChangeCountry("North America", NorthAmerica2018, NorthAmerica2008);
     });
-    //Asia
-    function asia() {
-        document.querySelector("#titleRegion").innerHTML = "Asia";
-        document.querySelector(".ueberschrift1").innerHTML = Asia2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = Asiaprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = Asiavergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = Asiavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + Asiaprozent + '%');
-    }
-    window.addEventListener("load", function () {
-        document.querySelector(".asia").addEventListener("click", asia);
+    document.querySelector("#asia").addEventListener('click', function () {
+        ChangeCountry("Asia", Asia2018, Asia2008);
     });
-    //Australia
-    function australia() {
-        document.querySelector("#titleRegion").innerHTML = "Australia";
-        document.querySelector(".ueberschrift1").innerHTML = Australia2018.toFixed(2) + "";
-        document.querySelector(".ueberschrift2").innerHTML = Australiaprozent.toFixed(2) + "%";
-        document.querySelector(".ueberschrift3").innerHTML = Australiavergleich.toFixed(2) + "%";
-        document.querySelector(".ueberschrift4").innerHTML = Australiavergleich2.toFixed(2) + "";
-        document.querySelector(".chart").setAttribute('style', 'height:' + Australiaprozent + '%');
-    }
-    window.addEventListener("load", function () {
-        document.querySelector(".australia").addEventListener("click", australia);
+    document.querySelector("#australia").addEventListener('click', function () {
+        ChangeCountry("Australia", Australia2018, Australia2008);
     });
 })(L06 || (L06 = {}));
 //# sourceMappingURL=script.js.map

@@ -39,10 +39,10 @@ footer p {
     opacity: .5;
 }
 
-.europe, .africa, .australia, .northamerica, .southamerica, .asia {
+#europe, #africa, #australia, #northamerica, #southamerica, #asia {
     opacity: 0.6;
 }
 
-.europe:hover, .africa:hover, .australia:hover, .northamerica:hover, .southamerica:hover, .asia:hover{
+#europe:hover, #africa:hover, #australia:hover, #northamerica:hover, #southamerica:hover, #asia:hover{
     opacity: 100%;
 }
