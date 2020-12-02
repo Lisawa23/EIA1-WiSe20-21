@@ -71,3 +71,6 @@ img{
   right: 585px;
 }
 
+.play:hover{
+  opacity: 0.6;
+}

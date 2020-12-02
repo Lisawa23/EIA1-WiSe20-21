@@ -1,60 +1,67 @@
-const sound1:HTMLAudioElement = new Audio('../L07/assets/A.mp3');
-const sound2:HTMLAudioElement = new Audio('../L07/assets/C.mp3');
-const sound3:HTMLAudioElement = new Audio('../L07/assets/F.mp3');
-const sound4:HTMLAudioElement = new Audio('../L07/assets/G.mp3');
-const sound5:HTMLAudioElement = new Audio('../L07/assets/hihat.mp3');
-const sound6:HTMLAudioElement = new Audio('../L07/assets/kick.mp3');
-const sound7:HTMLAudioElement = new Audio('../L07/assets/laugh-1.mp3');
-const sound8:HTMLAudioElement = new Audio('../L07/assets/laugh-2.mp3');
-const sound9:HTMLAudioElement = new Audio('../L07/assets/snare.mp3');
+//Töne
+const sound: HTMLAudioElement [] = [];
+sound[0] = new Audio('../L07/assets/A.mp3');
+sound[1] = new Audio('../L07/assets/C.mp3');
+sound[2] = new Audio('../L07/assets/F.mp3');
+sound[3] = new Audio('../L07/assets/G.mp3');
+sound[4] = new Audio('../L07/assets/hihat.mp3');
+sound[5] = new Audio('../L07/assets/kick.mp3');
+sound[6] = new Audio('../L07/assets/laugh-1.mp3');
+sound[7] = new Audio('../L07/assets/laugh-2.mp3');
+sound[8] = new Audio('../L07/assets/snare.mp3');
 
-//button
-//playSample = Funktion
-//Der Beat bzw. die Reihenfolge der abzuspielenden Samples sollte in einem Array gespeichert werden.
-function playSample(sound:string): any{
-    document.getElementById('#square').innerHTML = sound;
+//Funktion
+function playSample(audio:number){
+    sound [audio].play();
 }
 
 //EventListener
 document.querySelector(".square1").addEventListener('click', function(){
-    sound1.play();
+    playSample(0);
     
 })
 
 document.querySelector(".square2").addEventListener('click', function(){
-    sound2.play();
+    playSample(1);
 })
 
 document.querySelector(".square3").addEventListener('click', function(){
-    sound3.play();
+    playSample(2);
 })
 
 document.querySelector(".square4").addEventListener('click', function(){
-    sound4.play();
+    playSample(3);
 })
 
 document.querySelector(".square5").addEventListener('click', function(){
-    sound5.play();
+    playSample(4);
 })
 
 document.querySelector(".square6").addEventListener('click', function(){
-    sound6.play();
+    playSample(5);
 })
 
 document.querySelector(".square7").addEventListener('click', function(){
-    sound7.play();
+    playSample(6);
 })
 
 document.querySelector(".square8").addEventListener('click', function(){
-    sound8.play();
+    playSample(7);
 })
 
 document.querySelector(".square9").addEventListener('click', function(){
-    sound9.play();
+    playSample(8);
 })
 
-
 //Intervall
+function Reihenfolge(hihat:number, kick:number, snare:number){
 setInterval(function() {
-    //Anweisung
+    playSample(hihat);
+    playSample(kick);
+    playSample(snare);
    }, 500);
+}
+
+   document.querySelector(".play").addEventListener('click', function(){
+       Reihenfolge(4,5,8);
+   })
