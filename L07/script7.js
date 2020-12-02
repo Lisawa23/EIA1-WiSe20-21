@@ -1,12 +1,12 @@
-var sound1 = new Audio('../assets/A.mp3');
-var sound2 = new Audio('../assets/C.mp3');
-var sound3 = new Audio('../assets/F.mp3');
-var sound4 = new Audio('../assets/G.mp3');
-var sound5 = new Audio('../assets/hihat.mp3');
-var sound6 = new Audio('../assets/kick.mp3');
-var sound7 = new Audio('../assets/laugh-1.mp3');
-var sound8 = new Audio('../assets/laugh-2.mp3');
-var sound9 = new Audio('../assets/drums.mp3');
+var sound1 = new Audio('../L07/assets/A.mp3');
+var sound2 = new Audio('../L07/assets/C.mp3');
+var sound3 = new Audio('../L07/assets/F.mp3');
+var sound4 = new Audio('../L07/assets/G.mp3');
+var sound5 = new Audio('../L07/assets/hihat.mp3');
+var sound6 = new Audio('../L07/assets/kick.mp3');
+var sound7 = new Audio('../L07/assets/laugh-1.mp3');
+var sound8 = new Audio('../L07/assets/laugh-2.mp3');
+var sound9 = new Audio('../L07/assets/snare.mp3');
 //button
 //playSample = Funktion
 //Der Beat bzw. die Reihenfolge der abzuspielenden Samples sollte in einem Array gespeichert werden.

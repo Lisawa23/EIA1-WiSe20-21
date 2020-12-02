@@ -1,12 +1,12 @@
-const sound1:HTMLAudioElement = new Audio('../assets/A.mp3');
-const sound2:HTMLAudioElement = new Audio('../assets/C.mp3');
-const sound3:HTMLAudioElement = new Audio('../assets/F.mp3');
-const sound4:HTMLAudioElement = new Audio('../assets/G.mp3');
-const sound5:HTMLAudioElement = new Audio('../assets/hihat.mp3');
-const sound6:HTMLAudioElement = new Audio('../assets/kick.mp3');
-const sound7:HTMLAudioElement = new Audio('../assets/laugh-1.mp3');
-const sound8:HTMLAudioElement = new Audio('../assets/laugh-2.mp3');
-const sound9:HTMLAudioElement = new Audio('../assets/drums.mp3');
+const sound1:HTMLAudioElement = new Audio('../L07/assets/A.mp3');
+const sound2:HTMLAudioElement = new Audio('../L07/assets/C.mp3');
+const sound3:HTMLAudioElement = new Audio('../L07/assets/F.mp3');
+const sound4:HTMLAudioElement = new Audio('../L07/assets/G.mp3');
+const sound5:HTMLAudioElement = new Audio('../L07/assets/hihat.mp3');
+const sound6:HTMLAudioElement = new Audio('../L07/assets/kick.mp3');
+const sound7:HTMLAudioElement = new Audio('../L07/assets/laugh-1.mp3');
+const sound8:HTMLAudioElement = new Audio('../L07/assets/laugh-2.mp3');
+const sound9:HTMLAudioElement = new Audio('../L07/assets/snare.mp3');
 
 //button
 //playSample = Funktion
