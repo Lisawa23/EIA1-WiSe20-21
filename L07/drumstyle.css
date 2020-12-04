@@ -6,7 +6,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-image: url(../L07/images/hintergrund.jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -31,33 +31,37 @@ body{
 }
 
 .square1{
-  background-color: #f746ad;
+  background: linear-gradient(to top, #530007, #ffc8d4);
 }
 .square2{
-  background-color: #f735dd;
+  background: linear-gradient(to top,#9e010e, #ffbbbb);
 }
 .square3{
-  background-color: #aa4fff;
+  background: linear-gradient(to top,#9e003d, #fabad8);
 }
 .square4{
-  background-color: #5389fd;
+  background: linear-gradient(to top,#000b4b, #b9b3f8);
 }
 .square5{
-  background-color: #5ef3f8;
+  background: linear-gradient(to top,#0d039b, #c5b6ff);
 }
 .square6{
-  background-color: #60ff95;
+  background: linear-gradient(to top,#005f70, #d2f3fc);
 }
 .square7{
-  background-color: #fdff84;
+  background: linear-gradient(to top,#00330b, #bbffca);
 }
 .square8{
-  background-color: #f1b15d;
+  background: linear-gradient(to top,#1b8501, #ceffbb);
 }
 .square9{
-  background-color: #f75f5f;
+  background: linear-gradient(to top,#c4c400, #f5ffbb);
 }
 
 .play:hover{
   opacity: 0.6;
+}
+
+.play{
+  margin-left: 35%;
 }
