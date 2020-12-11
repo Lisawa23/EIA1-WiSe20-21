@@ -93,7 +93,6 @@ let beatArray: number [] = [];
 beatArray[0] = 4;
 beatArray[1] = 5;
 beatArray[2] = 8;
-// ohne den Loop von Aufgabe 7???
 
 var myInterval: number;
 function playLoop (b: boolean): void {
