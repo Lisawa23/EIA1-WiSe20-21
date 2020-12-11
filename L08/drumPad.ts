@@ -74,12 +74,12 @@ let i: number = 0;
 //Wechsel Play- und Stop-Button
 playButton.addEventListener("click", function(): void {
     toggleClasses(this, stopButton);
-    playSchleife(true);
+    playLoop(true);
 });
 
 stopButton.addEventListener("click", function(): void {
     toggleClasses(this, playButton);
-    playSchleife(false);
+    playLoop(false);
 });
 
 function toggleClasses(firstHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
@@ -90,13 +90,13 @@ function toggleClasses(firstHTMLElement: HTMLElement, secondHTMLElement: HTMLEle
 
 //Array und Funktion - Intervall
 let beatArray: number [] = [];
-// beatArray[0] = 4;
-// beatArray[1] = 5;
-// beatArray[2] = 8;
+beatArray[0] = 4;
+beatArray[1] = 5;
+beatArray[2] = 8;
 // ohne den Loop von Aufgabe 7???
 
-var myInterval;
-function playSchleife (b: boolean): void {
+var myInterval: number;
+function playLoop (b: boolean): void {
 
     if (b == true) {
         

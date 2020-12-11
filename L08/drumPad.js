@@ -61,11 +61,11 @@ var L08;
     //Wechsel Play- und Stop-Button
     playButton.addEventListener("click", function () {
         toggleClasses(this, stopButton);
-        playSchleife(true);
+        playLoop(true);
     });
     stopButton.addEventListener("click", function () {
         toggleClasses(this, playButton);
-        playSchleife(false);
+        playLoop(false);
     });
     function toggleClasses(firstHTMLElement, secondHTMLElement) {
         firstHTMLElement.classList.add("is-hidden");
@@ -73,12 +73,12 @@ var L08;
     }
     //Array und Funktion - Intervall
     var beatArray = [];
-    // beatArray[0] = 4;
-    // beatArray[1] = 5;
-    // beatArray[2] = 8;
+    beatArray[0] = 4;
+    beatArray[1] = 5;
+    beatArray[2] = 8;
     // ohne den Loop von Aufgabe 7???
     var myInterval;
-    function playSchleife(b) {
+    function playLoop(b) {
         if (b == true) {
             myInterval = setInterval(function () {
                 if (i < beatArray.length) {

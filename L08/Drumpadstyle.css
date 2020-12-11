@@ -6,7 +6,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../L07/images/hintergrund.jpg);
+    background-image: url(../L08/hintergrund.jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -66,7 +66,7 @@ body{
 
 .fas{
   cursor: pointer;
-  color: #ffffff;
+  color: #2b2929e1;
   font-size: 50px;
   margin-left: 17%;
 }
