@@ -1,8 +1,10 @@
 body {
-  background: #fff;
+  background: #e4a8da88;
   color: #333;
-  font-family: Lato, sans-serif;
+  font-family: sans-serif;
 }
+
+/*Formatierung*/
 .container {
   display: block;
   width: 400px;
@@ -15,88 +17,39 @@ ul {
 li * {
   float: left;
 }
-li, h3 {
-  clear:both;
-  list-style:none;
-}
-input, button {
-  outline: none;
-}
-button {
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px 0 0;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-button:hover {
-  color: #333;
-}
-/* Heading */
-h3,
-label[for='new-task'] {
+h3, label[for='new-task'] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
-  padding: 30px 0 10px;
-  margin: 0;
-  text-transform: uppercase;
+  text-decoration: underline;
+  padding: 10px 0 5px;
 }
-input[type="text"] {
-  margin: 0;
-  font-size: 18px;
-  line-height: 18px;
-  height: 18px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 6px;
-  font-family: Lato, sans-serif;
-  color: #888;
-}
-input[type="text"]:focus {
-  color: #333;
-}
-
-/* New Task */
-label[for='new-task'] {
-  display: block;
-  margin: 0 0 20px;
-}
-input#new-task {
-  float: left;
-  width: 318px;
-}
-p > button:hover {
-  color: #0FC57C;
-}
-
-/* Task list */
 li {
   overflow: hidden;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  padding-top: 20px;
+  border-bottom: 1px;
 }
-li > input[type="checkbox"] {
-  margin: 0 10px;
-  position: relative;
-  top: 15px;
+label[for='new-task'] {
+  display: block;
+  margin-bottom: 15px;
 }
-li > label {
+label {
   font-size: 18px;
   line-height: 40px;
   width: 237px;
   padding: 0 0 0 11px;
 }
-li >  input[type="text"] {
+
+/*Input*/
+input[type="text"] {
+  font-size: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: sans-serif;
+  color: #333;
   width: 226px;
-}
-li > .delete:hover {
-  color: #CF2323;
 }
 
 /* Completed */
@@ -110,10 +63,36 @@ ul li input[type=text] {
   display:none;
 }
 
-ul li.editMode input[type=text] {
+/* ul li.editMode input[type=text] {
   display:block;
 }
-
 ul li.editMode label {
   display:none;
+} */
+
+/*Button*/
+.fa-sync-alt{
+  float: right;
+}
+.fa-sync-alt:hover{
+  color: #000000;
+}
+.fas, .far, button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.fa-trash-alt:hover {
+  color: #CF2323;
+}
+.fa-edit:hover, .fa-check-circle, button:hover {
+  color: #0FC57C;
+}
+.hidden{
+  display: none !important;
 }
