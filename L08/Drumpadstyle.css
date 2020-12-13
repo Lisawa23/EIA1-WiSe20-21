@@ -72,8 +72,7 @@ body{
 }
 
 .fa-play, .fa-stop{
-  position: absolute;
-  margin-left: 30%;
+  margin-left: 10%;
 }
 
 .is-hidden{

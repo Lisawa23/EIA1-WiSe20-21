@@ -75,6 +75,8 @@ let i: number = 0;
 playButton.addEventListener("click", function(): void {
     toggleClasses(this, stopButton);
     playLoop(true);
+    recordButton.classList.remove("active");
+    recordButton.classList.add("inactive");
 });
 
 stopButton.addEventListener("click", function(): void {
@@ -143,7 +145,7 @@ function randomBeat (a: boolean): void {
     if (a == true) {
         secInterval = setInterval(() => {    
             for (x = 0; x <= 9; x++) { 
-                leeresArray.push(Math.floor(Math.random() * 10));
+                leeresArray.push(Math.floor(Math.random() * 10) + 1);
             }    
             if (x < leeresArray.length) {
                 playSample(leeresArray[x]);
@@ -215,33 +217,38 @@ switch (event.key) {
         recordSample(8);
         break;
     case"q":
-        randomBeat(true);
-        break;
-    case"w":
-        beatArray.length = 0;
-        leeresArray.length = 0;
-        randomBeat(false);
-        break;
-    case"e":
-        recordButton.classList.remove("inactive");
-        recordButton.classList.add("active");
-        booleanRec = true;
-        break;
-    case"r":
-        recordButton.classList.remove("active");
-        recordButton.classList.add("inactive");
-        booleanRec = false;
-        break;
-    case"t":
         playButton.classList.contains("is-hidden");
         playButton.classList.add("is-hidden");
         stopButton.classList.remove("is-hidden");
         playLoop(true);
         break;
-    case"z":
+    case"w":
         stopButton.classList.add("is-hidden");
         playButton.classList.remove("is-hidden");
         playLoop(false);
+        randomBeat(false);
+        break;
+    case"e":
+        playButton.classList.add("is-hidden");
+        stopButton.classList.remove("is-hidden");
+        randomBeat(true);
+        break;
+    case"r":
+        beatArray.length = 0;
+        leeresArray.length = 0;
+        randomBeat(false);
+        stopButton.classList.add("is-hidden");
+        playButton.classList.remove("is-hidden");
+        break;
+    case"t":
+        recordButton.classList.remove("inactive");
+        recordButton.classList.add("active");
+        booleanRec = true;
+        break;
+    case"z":
+        recordButton.classList.remove("active");
+        recordButton.classList.add("inactive");
+        booleanRec = false;
         break;
     }
 });
