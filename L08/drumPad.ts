@@ -168,6 +168,8 @@ randomButton.addEventListener("click", function(): void {
 
 //Lösch-Button
 trashButton.addEventListener("click", function(): void {
+    stopButton.classList.add("is-hidden");
+    playButton.classList.remove("is-hidden");
     beatArray.length = 0;
     leeresArray.length = 0;
     randomBeat(false);

@@ -146,6 +146,8 @@ var L08;
     });
     //Lösch-Button
     trashButton.addEventListener("click", function () {
+        stopButton.classList.add("is-hidden");
+        playButton.classList.remove("is-hidden");
         beatArray.length = 0;
         leeresArray.length = 0;
         randomBeat(false);
