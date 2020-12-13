@@ -62,12 +62,12 @@ document.querySelector(".square9").addEventListener("click", function(): void {
     recordSample(8);
 });
 
-
 //Buttons
 const playButton: HTMLElement = document.querySelector(".fa-play");
 const stopButton: HTMLElement = document.querySelector(".fa-stop");
 const trashButton: HTMLElement = document.querySelector(".fa-trash-alt");
 const recordButton: HTMLElement = document.querySelector(".fa-microphone");
+const randomButton: HTMLElement = document.querySelector(".fa-random");
 
 let i: number = 0;
 
@@ -80,13 +80,13 @@ playButton.addEventListener("click", function(): void {
 stopButton.addEventListener("click", function(): void {
     toggleClasses(this, playButton);
     playLoop(false);
+    randomBeat(false);
 });
 
 function toggleClasses(firstHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
     firstHTMLElement.classList.add("is-hidden");
     secondHTMLElement.classList.remove("is-hidden");
 }
-
 
 //Array und Funktion - Intervall
 let beatArray: number [] = [];
@@ -98,20 +98,16 @@ var myInterval: number;
 function playLoop (b: boolean): void {
 
     if (b == true) {
-        
         myInterval = setInterval(() => {        
-            
             if (i < beatArray.length) {
                 playSample(beatArray[i]);
                 i++;
             }
-            
             else {
                 i = 0;
             }
         },                       600 );
     }
-    
     else {
         clearInterval(myInterval);
     }
@@ -136,11 +132,116 @@ recordButton.addEventListener("click", function(): void {
         recordButton.classList.add("inactive");
         booleanRec = false;
     }
-
 });
-//Lösch-Button:
+
+//Zufallsbeat
+let leeresArray: number [] = [];
+let x: number = 0;
+var secInterval: number;
+
+function randomBeat (a: boolean): void {
+    if (a == true) {
+        secInterval = setInterval(() => {    
+            for (x = 0; x <= 9; x++) { 
+                leeresArray.push(Math.floor(Math.random() * 10));
+            }    
+            if (x < leeresArray.length) {
+                playSample(leeresArray[x]);
+                x++;
+            }
+            else {
+                x = 0;
+            }
+        },                        600);
+    }
+    else {
+        clearInterval(secInterval);
+    }
+}
+
+randomButton.addEventListener("click", function(): void {
+    playButton.classList.contains("is-hidden");
+    playButton.classList.add("is-hidden");
+    stopButton.classList.remove("is-hidden");
+    randomBeat(true);
+});
+
+//Lösch-Button
 trashButton.addEventListener("click", function(): void {
     beatArray.length = 0;
-
+    leeresArray.length = 0;
+    randomBeat(false);
 }); 
+
+//Tasteneingabe
+document.addEventListener("keydown", function(event: KeyboardEvent): void {
+switch (event.key) {
+    case "1":
+        playSample(0);
+        recordSample(0);
+        break;
+    case "2":
+        playSample(1);
+        recordSample(1);
+        break;
+    case "3":
+        playSample(2);
+        recordSample(2);
+        break;
+    case "4":
+        playSample(3);
+        recordSample(3);
+        break;
+    case "5":
+        playSample(4);
+        recordSample(4);
+        break;
+    case "6":
+        playSample(5);
+        recordSample(5);
+        break;
+    case "7":
+        playSample(6);
+        recordSample(6);
+        break;
+    case "8":
+        playSample(7);
+        recordSample(7);
+        break;
+    case "9":
+        playSample(8);
+        recordSample(8);
+        break;
+    case"q":
+        randomBeat(true);
+        break;
+    case"w":
+        beatArray.length = 0;
+        leeresArray.length = 0;
+        randomBeat(false);
+        break;
+    case"e":
+        recordButton.classList.remove("inactive");
+        recordButton.classList.add("active");
+        booleanRec = true;
+        break;
+    case"r":
+        recordButton.classList.remove("active");
+        recordButton.classList.add("inactive");
+        booleanRec = false;
+        break;
+    case"t":
+        playButton.classList.contains("is-hidden");
+        playButton.classList.add("is-hidden");
+        stopButton.classList.remove("is-hidden");
+        playLoop(true);
+        break;
+    case"z":
+        stopButton.classList.add("is-hidden");
+        playButton.classList.remove("is-hidden");
+        playLoop(false);
+        break;
+    }
+});
 }
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+  <link rel="stylesheet" href="../L09/StyleToDo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="../L09/scriptToDo.js" defer></script>
+</head>
+<body>
+   <div class="container">
+       <div class="header">
+            <h1>ToDo App</h1>
+            <div class="clear">
+                <i class="fas fa-sync-alt" aria-hidden="true"></i>
+            </div>
+            <div class="date"></div>
+        </div>
+        <div class="content">
+            <ul id="list">
+                <li class="item">
+                    <i class="far fa-circle complete"></i>
+                    <p class="text">Drink Coffee</p>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="add-item">
+            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+            <input type="text" id="input" placeholder="Add a to-do">
+        </div>
+    </div>
+</body>
+</html>

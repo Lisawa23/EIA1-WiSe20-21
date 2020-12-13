@@ -57,6 +57,7 @@ var L08;
     var stopButton = document.querySelector(".fa-stop");
     var trashButton = document.querySelector(".fa-trash-alt");
     var recordButton = document.querySelector(".fa-microphone");
+    var randomButton = document.querySelector(".fa-random");
     var i = 0;
     //Wechsel Play- und Stop-Button
     playButton.addEventListener("click", function () {
@@ -66,6 +67,7 @@ var L08;
     stopButton.addEventListener("click", function () {
         toggleClasses(this, playButton);
         playLoop(false);
+        randomBeat(false);
     });
     function toggleClasses(firstHTMLElement, secondHTMLElement) {
         firstHTMLElement.classList.add("is-hidden");
@@ -76,7 +78,6 @@ var L08;
     beatArray[0] = 4;
     beatArray[1] = 5;
     beatArray[2] = 8;
-    // ohne den Loop von Aufgabe 7???
     var myInterval;
     function playLoop(b) {
         if (b == true) {
@@ -114,9 +115,110 @@ var L08;
             booleanRec = false;
         }
     });
-    //Lösch-Button:
+    //Zufallsbeat
+    var leeresArray = [];
+    var x = 0;
+    var secInterval;
+    function randomBeat(a) {
+        if (a == true) {
+            secInterval = setInterval(function () {
+                for (x = 0; x <= 9; x++) {
+                    leeresArray.push(Math.floor(Math.random() * 10));
+                }
+                if (x < leeresArray.length) {
+                    playSample(leeresArray[x]);
+                    x++;
+                }
+                else {
+                    x = 0;
+                }
+            }, 600);
+        }
+        else {
+            clearInterval(secInterval);
+        }
+    }
+    randomButton.addEventListener("click", function () {
+        playButton.classList.contains("is-hidden");
+        playButton.classList.add("is-hidden");
+        stopButton.classList.remove("is-hidden");
+        randomBeat(true);
+    });
+    //Lösch-Button
     trashButton.addEventListener("click", function () {
         beatArray.length = 0;
+        leeresArray.length = 0;
+        randomBeat(false);
+    });
+    //Tasteneingabe
+    document.addEventListener("keydown", function (event) {
+        switch (event.key) {
+            case "1":
+                playSample(0);
+                recordSample(0);
+                break;
+            case "2":
+                playSample(1);
+                recordSample(1);
+                break;
+            case "3":
+                playSample(2);
+                recordSample(2);
+                break;
+            case "4":
+                playSample(3);
+                recordSample(3);
+                break;
+            case "5":
+                playSample(4);
+                recordSample(4);
+                break;
+            case "6":
+                playSample(5);
+                recordSample(5);
+                break;
+            case "7":
+                playSample(6);
+                recordSample(6);
+                break;
+            case "8":
+                playSample(7);
+                recordSample(7);
+                break;
+            case "9":
+                playSample(8);
+                recordSample(8);
+                break;
+            case "q":
+                randomBeat(true);
+                break;
+            case "w":
+                beatArray.length = 0;
+                leeresArray.length = 0;
+                randomBeat(false);
+                break;
+            case "e":
+                recordButton.classList.remove("inactive");
+                recordButton.classList.add("active");
+                booleanRec = true;
+                break;
+            case "r":
+                recordButton.classList.remove("active");
+                recordButton.classList.add("inactive");
+                booleanRec = false;
+                break;
+            case "t":
+                playButton.classList.contains("is-hidden");
+                playButton.classList.add("is-hidden");
+                stopButton.classList.remove("is-hidden");
+                playLoop(true);
+                break;
+            case "z":
+                stopButton.classList.add("is-hidden");
+                playButton.classList.remove("is-hidden");
+                playLoop(false);
+                break;
+        }
     });
 })(L08 || (L08 = {}));
 //# sourceMappingURL=drumPad.js.map

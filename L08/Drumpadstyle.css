@@ -68,12 +68,12 @@ body{
   cursor: pointer;
   color: #2b2929e1;
   font-size: 50px;
-  margin-left: 17%;
+  margin-left: 13%;
 }
 
 .fa-play, .fa-stop{
   position: absolute;
-  margin-left: 27%;
+  margin-left: 30%;
 }
 
 .is-hidden{
@@ -84,7 +84,24 @@ body{
   color: #646161;
 }
 
-.trash:hover{
+.trash:hover, .random:hover{
   opacity:0.6;
 }
 
+.keyboard{
+  margin-left: 38%;
+  margin-top: 5%;
+}
+
+.key{
+  cursor: pointer;
+  color: #2b2929e1;
+  font-size: 50px;
+  margin-left: 11%;
+  float: left;
+  z-index: 0;
+}
+
+h1{
+  margin-left: 7%;
+}
