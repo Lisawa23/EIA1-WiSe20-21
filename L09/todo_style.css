@@ -28,7 +28,7 @@ h1{
     text-align: center;
 }
 
-.header{
+.number{
     text-align: center;
 }
 #add{
@@ -60,20 +60,12 @@ li{
     border-radius: 3px;
     transition: .4s;
 }
-button:hover{
+button:hover, #clear:hover{
     background-color: #1565c0;
 }
 
 li:hover{
     background-color: #e0e0e0;
-}
-
-.fa-sync-alt{
-    padding-left: 80%;
-    cursor: pointer;
-}
-.fa-sync-alt:hover{
-    color: #451197;
 }
 
 .fa-trash-alt:hover {
@@ -89,6 +81,6 @@ li:hover{
     float: right;
 }
 
-.checkBox{
+.newtodo{
     cursor: pointer;
 }
