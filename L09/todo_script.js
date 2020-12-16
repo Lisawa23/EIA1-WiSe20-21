@@ -24,6 +24,7 @@ function addList(task) {
     li.innerHTML = "<i class=\"far delete fa-trash-alt\"></i><input type=\"checkbox\"><label class=\"nameElement\">" + task + "</label>";
     ul.appendChild(li);
     li.querySelector(".fa-trash-alt").addEventListener("click", deleteElement);
+    // document.querySelector("form").addEventListener("submit", coNumber);
 }
 //Clear List
 function clearList(e) {
@@ -37,28 +38,36 @@ function deleteElement(e) {
     var ul = document.querySelector("ul");
     var li = document.querySelector("li");
     ul.removeChild(li);
+    // document.querySelector("form").addEventListener("submit", delNumber);
 }
 //Number in total
 // var newNumber: number = 30;  
 // var index: number = 0;
-// function coNumber(newNumber: number): void {
-//     while (index <= newNumber) {
-//       document.querySelector(".number").innerHTML = + newNumber + " in total"; 
+// function coNumber(e: Event): void {
+//   e.preventDefault();
+//   while (index < newNumber) {
+//       document.querySelector(".number").innerHTML = + index + " in total"; 
 //       index ++; }
 // }
-// document.querySelector("#btn").addEventListener("click", function(): void {
-//   coNumber(newNumber); //versuch 2 newNumber löschen
-// });
-// let index: number = 0;
-// function coNumber(newNumber: number): void {
-//   let newNumber: number = 30;
-//   for  (let index: number = 0, index: any < newNumber, index++ ) {
-//       document.querySelector(".number").innerHTML += + newNumber[index] + " in total"; 
-//      }
+// function delNumber(e: Event): void {
+//   e.preventDefault();
+//   while (index < newNumber) {
+//     document.querySelector(".number").innerHTML = + index + " in total"; 
+//     index --; }
 // }
-// document.querySelector("#btn").addEventListener("click", function(): void {
-//   coNumber(newNumber); //versuch 2 newNumber löschen
-// });
+// var newNumber: number = 30;  
+// var index: number = 0;
+// function coNumber(): void {
+// for (var i: number = 0; i <= newNumber; i ++) { 
+//   if (i == 0) { 
+//     document.querySelector(".number").innerHTML = + i + " in total";
+//   }
+//   i ++;
+// } 
+// else {
+//   return;
+// }
+// }
 // function updateListCount(): void {
 //   var count: HTMLElement = $("li").length;
 //   $("h3").text(+ count + " in total");
@@ -66,15 +75,14 @@ function deleteElement(e) {
 // ->  updateListcOUNT(); bei add und remove hinschreiben
 // var newNumber: number = 30;
 // var index: number = 0;
+// var newNumber: number = 30;
 // function coNumber (): void {
-//   for (index = 0; index <= newNumber; index++) { 
-//     document.querySelector(".number").innerHTML = + newNumber + " in total"; }
+//   for (let index: number = 0; index < newNumber; index++) { 
+//     document.querySelector(".number").innerHTML = + index + " in total"; }
 // }
-// renderTasksCount() {
-//   const tasksCount =  _.size(this.props.todos);
-//   return tasksCount == 1 ? '1 task:' : (tasksCount + ' tasks:');
-// }
-// render(){
-//   return <p className="bg-info" style={{ padding: '5px 10px' }}>{ this.renderTasksCount() }</p>
+// function delNumber(): void {
+//   for (index = 0; index < newNumber; index++); {
+//     document.querySelector(".number").innerHTML = + newNumber + " in total"; 
+//     index --; }
 // }
 //# sourceMappingURL=todo_script.js.map
