@@ -22,7 +22,7 @@ var countplus = document.getElementsByClassName("newtodo");
 function addList(task) {
     var ul = document.querySelector("ul");
     var li = document.createElement("li");
-    li.innerHTML = "<span class=\"deletetodo\"><i class=\"far delete fa-trash-alt\"><span/></i><input class=\"newtodo\" type=\"checkbox\"><label class=\"nameElement\">" + task + "</label>";
+    li.innerHTML = "<span class=\"deletetodo\"><i class=\"far delete fa-trash-alt\"></span></i><input class=\"newtodo\" type=\"checkbox\"><label class=\"nameElement\">" + task + "</label>";
     ul.appendChild(li);
     li.querySelector(".deletetodo").addEventListener("click", deleteElement);
     for (var i = 0; i < countplus.length; i++) {

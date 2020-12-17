@@ -20,8 +20,9 @@ body{
    
 }
 h1{
-    margin: 12px 0;
+    margin: 50px 0;
     text-align: center;
+    color: #4567;
 }
 .add-elements{
     margin: 12px 0;

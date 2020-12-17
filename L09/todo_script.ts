@@ -26,7 +26,7 @@ const countplus: HTMLCollection = document.getElementsByClassName("newtodo");
 function addList(task: string): void {
   let ul: HTMLUListElement = document.querySelector("ul");
   let li: HTMLLIElement = document.createElement("li");
-  li.innerHTML = `<span class="deletetodo"><i class="far delete fa-trash-alt"><span/></i><input class="newtodo" type="checkbox"><label class="nameElement">${task}</label>`;
+  li.innerHTML = `<span class="deletetodo"><i class="far delete fa-trash-alt"></span></i><input class="newtodo" type="checkbox"><label class="nameElement">${task}</label>`;
   ul.appendChild(li);
   li.querySelector(".deletetodo").addEventListener("click", deleteElement);
 
