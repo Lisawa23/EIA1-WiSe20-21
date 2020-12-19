@@ -1,4 +1,4 @@
-namespace L10{
+namespace L10 {
 /**
  * Die ToDos werden in dem Array todosText gespeichert
  * Jedes ToDo hat aber, neben dem ToDo-Text, einen zweiten
@@ -106,6 +106,7 @@ function drawListToDOM(): void {
 function updateCounter(): void {
     counterDOMElement.innerHTML = todosText.length + " in total";
 }
+
 
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:

@@ -1,10 +1,25 @@
-var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
-var todosChecked: boolean[] =    [true    , false   , false];
+interface ToDo {
+    todosText: string;
+    todosChecked: boolean;
+}
+
+var toDOint: ToDo[] = [{
+    todosText: "Lorem",
+    todosChecked: true
+}, {
+    todosText: "Ipsum",
+    todosChecked: false
+}, {
+    todosText: "Dolor",
+    todosChecked: false
+}];
+
 
 var inputDOMElement: HTMLInputElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;
 var counterDOMElement: HTMLElement;
+
 
 window.addEventListener("load", function(): void {
     inputDOMElement = document.querySelector("#inputTodo");
@@ -17,13 +32,11 @@ window.addEventListener("load", function(): void {
 
 function drawListToDOM(): void {
     todosDOMElement.innerHTML = "";
-    for (let index: number = 0; index < todosText.length; index++) {
+    for (let index: number = 0; index < toDOint.length; index++) {
         let todo: HTMLElement = document.createElement("div");
         todo.classList.add("todo");
-        todo.innerHTML =  "<span class='check " + todosChecked[index] + "'><i class='fas fa-check'></i></span>"
-                            + todosText[index] +
-                            "<span class='trash fas fa-trash-alt'></span>";
-
+        todo.innerHTML =  "<span class='check " + toDOint[index].todosChecked + "'><i class='fas fa-check'></i></span>"
+                            + toDOint[index].todosText + "<span class='trash fas fa-trash-alt'></span>";
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
         todo.querySelector(".check").addEventListener("click", function(): void {
             toggleCheckState(index);
@@ -38,18 +51,25 @@ function drawListToDOM(): void {
 
     updateCounter();
 }
-
+//Funktionen für ANzeige
 function updateCounter(): void {
-    counterDOMElement.innerHTML = todosText.length + " in total";
+    counterDOMElement.innerHTML = toDOint.length + " in total";
 }
+
+// function countItem(index: number): void {
+//     let itemCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "'").length;
+//     let checkedCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "': checked").length;
+//     let uncheckedCount: number = itemCount - checkedCount;
+//     itemCountSpan.innerHTML = itemCount;
+//     uncheckedCountSpan.innerHTML = uncheckedCount;
+//   }
 
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
 function addTodo(): void {
     if (inputDOMElement.value != "") {
-        todosText.push(inputDOMElement.value);
-        todosChecked.push(false);
+        this.toDOint.unshift(inputDOMElement, false); /// //Bearbeiten!!!
         inputDOMElement.value = "";
         drawListToDOM();
     }
@@ -59,45 +79,16 @@ function addTodo(): void {
  * Der check- / unchecked Zustand eines ToDo wird wie folgt gesetzt:
  */
 function toggleCheckState(index: number): void {
-
-    /**
-     * Das Array, , das den Checked- / Uncheck-Status der ToDos abbildet,
-     * muss an jener Stelle, an der das entsprechende ToDo steht (nämlich
-     * an der übergebenen Index-Stelle) geändert werden.
-     * Von checked zu unchecked bzw. von unchecked zu checked
-     * Hier wird ein Boolean für den Zustand checked/unchecked genutzt,
-     * der Boolean muss also von true zu false bzw. false zu true gestellt werden.
-     * Ein toggle (also Welchseln zwischen zwei Zuständen) lässt sich folgendermaßen
-     * kurz schreiben: wert = !wert
-     * Bedeutet: der Wert soll das Gegenteil von seinem Wert annehmen.
-     * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
-     * Kurs behandelt wurden) nutzen.
-     */
-    todosChecked[index] = !todosChecked[index];
-
-    /**
-     * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-     * wird wieder getriggert
-     */
+    toDOint[index].todosChecked = !toDOint[index].todosChecked;
     drawListToDOM();
+    // countItem();
 }
 
 /**
  * Diese Funktion löscht ein ToDo
  */
 function deleteTodo(index: number): void {
-    /**
-     * Durch "index" ist die entsprechende Stelle im Array
-     * bekannt, an der das ToDo steht.
-     * Jetzt muss diese Stelle beider Arrays gelöscht werden,
-     * das ToDo-Text-Array und das Checked/Unchecked-Array
-     */
-    todosText.splice(index, 1);
-    todosChecked.splice(index, 1);
-    
-    /**
-     * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
-     * wird wieder getriggert
-     */
+    toDOint.splice(index, 1);
     drawListToDOM();
 }
+

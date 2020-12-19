@@ -1,6 +1,6 @@
 //LoadButton
 document.querySelector("#clear").addEventListener("click", function () {
-    localStorage.clear(); //Lokaler Speicher
+    localStorage.clear(); //Lokaler Variablen Speicher 
     location.reload();
 });
 // subit data function

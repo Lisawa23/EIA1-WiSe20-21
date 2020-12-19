@@ -9,7 +9,7 @@ main {
     text-align: center;
 }
 
-#counter {
+#counter, #done, #open {
     color: grey;
 }
 
