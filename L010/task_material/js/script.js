@@ -12,11 +12,15 @@ var inputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
 var counterDOMElement;
+var doneDOMElement;
+var openDOMElement;
 window.addEventListener("load", function () {
     inputDOMElement = document.querySelector("#inputTodo");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    doneDOMElement = document.querySelector("#done");
+    openDOMElement = document.querySelector("#open");
     addButtonDOMElement.addEventListener("click", addTodo);
     drawListToDOM();
 });
@@ -45,20 +49,28 @@ function drawListToDOM() {
 //Funktionen für ANzeige
 function updateCounter() {
     counterDOMElement.innerHTML = toDOint.length + " in total";
+    var counterOpen = 0;
+    var counterDone = 0;
+    for (var i = 0; i < toDOint.length; i++) {
+        if (toDOint[i].todosChecked == false) {
+            counterOpen++;
+        }
+        else {
+            counterDone++;
+        }
+        doneDOMElement.innerHTML = counterDone + " done";
+        openDOMElement.innerHTML = counterOpen + " open";
+    }
 }
-// function countItem(index: number): void {
-//     let itemCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "'").length;
-//     let checkedCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "': checked").length;
-//     let uncheckedCount: number = itemCount - checkedCount;
-//     itemCountSpan.innerHTML = itemCount;
-//     uncheckedCountSpan.innerHTML = uncheckedCount;
-//   }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
 function addTodo() {
     if (inputDOMElement.value != "") {
-        this.toDOint.unshift(inputDOMElement, false); /// //Bearbeiten!!!
+        toDOint.unshift({
+            todosText: inputDOMElement.value,
+            todosChecked: false
+        });
         inputDOMElement.value = "";
         drawListToDOM();
     }

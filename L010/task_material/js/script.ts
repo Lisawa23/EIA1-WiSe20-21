@@ -19,13 +19,16 @@ var inputDOMElement: HTMLInputElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;
 var counterDOMElement: HTMLElement;
-
+var doneDOMElement: HTMLElement;
+var openDOMElement: HTMLElement;
 
 window.addEventListener("load", function(): void {
     inputDOMElement = document.querySelector("#inputTodo");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
+    doneDOMElement = document.querySelector("#done");
+    openDOMElement = document.querySelector("#open");
     addButtonDOMElement.addEventListener("click", addTodo);
     drawListToDOM();
 });
@@ -54,22 +57,28 @@ function drawListToDOM(): void {
 //Funktionen für ANzeige
 function updateCounter(): void {
     counterDOMElement.innerHTML = toDOint.length + " in total";
+    let counterOpen: number = 0;
+    let counterDone: number = 0;
+    for (let i: number = 0; i < toDOint.length; i++) {
+        if (toDOint[i].todosChecked == false) {
+            counterOpen++;
+        }
+        else {
+            counterDone++;
+        }
+        doneDOMElement.innerHTML = counterDone + " done";
+        openDOMElement.innerHTML = counterOpen + " open";
+    }
 }
-
-// function countItem(index: number): void {
-//     let itemCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "'").length;
-//     let checkedCount: number = document.querySelectorAll("span class='check " + toDOint[index].todosChecked + "': checked").length;
-//     let uncheckedCount: number = itemCount - checkedCount;
-//     itemCountSpan.innerHTML = itemCount;
-//     uncheckedCountSpan.innerHTML = uncheckedCount;
-//   }
 
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
 function addTodo(): void {
     if (inputDOMElement.value != "") {
-        this.toDOint.unshift(inputDOMElement, false); /// //Bearbeiten!!!
+        toDOint.unshift({
+            todosText: inputDOMElement.value,
+            todosChecked: false});
         inputDOMElement.value = "";
         drawListToDOM();
     }
