@@ -16,6 +16,7 @@ var toDOint: ToDo[] = [{
 
 
 var inputDOMElement: HTMLInputElement;
+var outputDOMElement: HTMLSpanElement;
 var addButtonDOMElement: HTMLElement;
 var todosDOMElement: HTMLElement;
 var counterDOMElement: HTMLElement;
@@ -24,6 +25,7 @@ var openDOMElement: HTMLElement;
 
 window.addEventListener("load", function(): void {
     inputDOMElement = document.querySelector("#inputTodo");
+    outputDOMElement = document.querySelector("#output");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
@@ -50,6 +52,7 @@ function drawListToDOM(): void {
 
         // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
         todosDOMElement.appendChild(todo);
+        // outputDOMElement.appendChild(todo);
     }
 
     updateCounter();
@@ -57,6 +60,7 @@ function drawListToDOM(): void {
 //Funktionen für ANzeige
 function updateCounter(): void {
     counterDOMElement.innerHTML = toDOint.length + " in total";
+//To Dos Done oder Open
     let counterOpen: number = 0;
     let counterDone: number = 0;
     for (let i: number = 0; i < toDOint.length; i++) {
@@ -70,7 +74,7 @@ function updateCounter(): void {
         openDOMElement.innerHTML = counterOpen + " open";
     }
 }
-
+    
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
  */
@@ -90,7 +94,6 @@ function addTodo(): void {
 function toggleCheckState(index: number): void {
     toDOint[index].todosChecked = !toDOint[index].todosChecked;
     drawListToDOM();
-    // countItem();
 }
 
 /**
@@ -101,3 +104,39 @@ function deleteTodo(index: number): void {
     drawListToDOM();
 }
 
+//Artyom
+//Quelle: https://docs.ourcodeworld.com/projects/artyom-js
+declare var Artyom: any;
+
+window.addEventListener("load", function(): void {
+    const artyom: any = new Artyom();
+    
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function(i: any, wildcard: string): void {
+            toDOint.unshift({
+                todosText: wildcard,
+                todosChecked: false});
+            addTodo();
+            drawListToDOM();
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+        }
+    });
+    
+    function startContinuousArtyom(): void {
+        artyom.initialize({
+        lang: "de-DE",
+        continuous: true,
+        listen: true,
+        interimResults: true,
+        debug: true
+    });
+}
+    function stopContinuousArtyom(): void {
+        artyom.fatality();
+    }
+
+    document.querySelector("#start").addEventListener("click", startContinuousArtyom);
+    document.querySelector("#stop").addEventListener("click", stopContinuousArtyom);
+});

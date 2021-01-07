@@ -1,3 +1,4 @@
+namespace vorlage {
 declare var Artyom: any;
 
 window.addEventListener("load", function(): void {
@@ -32,3 +33,4 @@ window.addEventListener("load", function(): void {
     startContinuousArtyom();
     
 });
+}

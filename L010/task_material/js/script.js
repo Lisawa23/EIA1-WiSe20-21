@@ -9,6 +9,7 @@ var toDOint = [{
         todosChecked: false
     }];
 var inputDOMElement;
+var outputDOMElement;
 var addButtonDOMElement;
 var todosDOMElement;
 var counterDOMElement;
@@ -16,6 +17,7 @@ var doneDOMElement;
 var openDOMElement;
 window.addEventListener("load", function () {
     inputDOMElement = document.querySelector("#inputTodo");
+    outputDOMElement = document.querySelector("#output");
     addButtonDOMElement = document.querySelector("#addButton");
     todosDOMElement = document.querySelector("#todos");
     counterDOMElement = document.querySelector("#counter");
@@ -49,6 +51,7 @@ function drawListToDOM() {
 //Funktionen für ANzeige
 function updateCounter() {
     counterDOMElement.innerHTML = toDOint.length + " in total";
+    //To Dos Done oder Open
     var counterOpen = 0;
     var counterDone = 0;
     for (var i = 0; i < toDOint.length; i++) {
@@ -81,7 +84,6 @@ function addTodo() {
 function toggleCheckState(index) {
     toDOint[index].todosChecked = !toDOint[index].todosChecked;
     drawListToDOM();
-    // countItem();
 }
 /**
  * Diese Funktion löscht ein ToDo
@@ -90,4 +92,34 @@ function deleteTodo(index) {
     toDOint.splice(index, 1);
     drawListToDOM();
 }
+window.addEventListener("load", function () {
+    var artyom = new Artyom();
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function (i, wildcard) {
+            toDOint.unshift({
+                todosText: wildcard,
+                todosChecked: false
+            });
+            addTodo();
+            drawListToDOM();
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+        }
+    });
+    function startContinuousArtyom() {
+        artyom.initialize({
+            lang: "de-DE",
+            continuous: true,
+            listen: true,
+            interimResults: true,
+            debug: true
+        });
+    }
+    function stopContinuousArtyom() {
+        artyom.fatality();
+    }
+    document.querySelector("#start").addEventListener("click", startContinuousArtyom);
+    document.querySelector("#stop").addEventListener("click", stopContinuousArtyom);
+});
 //# sourceMappingURL=script.js.map
