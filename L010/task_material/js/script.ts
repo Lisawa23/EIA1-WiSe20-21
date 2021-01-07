@@ -61,6 +61,8 @@ function drawListToDOM(): void {
 function updateCounter(): void {
     counterDOMElement.innerHTML = toDOint.length + " in total";
 //To Dos Done oder Open
+//Quelle: https://stackoverflow.com/questions/6120931/how-to-count-certain-elements-in-array
+// und : https://stackoverflow.com/questions/51972480/making-a-counter-in-javascript-to-do-app 
     let counterOpen: number = 0;
     let counterDone: number = 0;
     for (let i: number = 0; i < toDOint.length; i++) {
