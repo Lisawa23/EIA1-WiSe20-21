@@ -85,3 +85,12 @@ main {
 .trash:hover {
     color: black;
 }
+
+#start, #stop {
+    margin: 2% 0 0 32%;
+}
+.text {
+    padding: 1px;
+    margin: 2% 36% 0 38%;
+    background-color: grey;
+}

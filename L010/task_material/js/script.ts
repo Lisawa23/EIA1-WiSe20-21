@@ -108,10 +108,11 @@ function deleteTodo(index: number): void {
 
 //Artyom
 //Quelle: https://docs.ourcodeworld.com/projects/artyom-js
-declare var Artyom: any;
+
+declare var Artyom: any; //Herr Rausch sagt any ist bei Artyom erlaubt :)
 
 window.addEventListener("load", function(): void {
-    const artyom: any = new Artyom();
+    var artyom: any = new Artyom(); 
     
     artyom.addCommands({
         indexes: ["erstelle Aufgabe *"],
