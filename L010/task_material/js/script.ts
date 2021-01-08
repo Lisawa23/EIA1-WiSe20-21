@@ -120,21 +120,28 @@ window.addEventListener("load", function(): void {
             toDOint.unshift({
                 todosText: wildcard,
                 todosChecked: false});
-            addTodo();
             drawListToDOM();
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
         }
     });
     
     function startContinuousArtyom(): void {
-        artyom.initialize({
-        lang: "de-DE",
-        continuous: true,
-        listen: true,
-        interimResults: true,
-        debug: true
-    });
-}
+        artyom.fatality();
+    
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function(): void {
+                    console.log("Ready!");
+                });
+            }, 
+            250);
+    }
     function stopContinuousArtyom(): void {
         artyom.fatality();
     }

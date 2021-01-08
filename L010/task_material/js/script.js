@@ -52,6 +52,8 @@ function drawListToDOM() {
 function updateCounter() {
     counterDOMElement.innerHTML = toDOint.length + " in total";
     //To Dos Done oder Open
+    //Quelle: https://stackoverflow.com/questions/6120931/how-to-count-certain-elements-in-array
+    // und : https://stackoverflow.com/questions/51972480/making-a-counter-in-javascript-to-do-app 
     var counterOpen = 0;
     var counterDone = 0;
     for (var i = 0; i < toDOint.length; i++) {
@@ -102,19 +104,23 @@ window.addEventListener("load", function () {
                 todosText: wildcard,
                 todosChecked: false
             });
-            addTodo();
             drawListToDOM();
             console.log("Neue Aufgabe wird erstellt: " + wildcard);
         }
     });
     function startContinuousArtyom() {
-        artyom.initialize({
-            lang: "de-DE",
-            continuous: true,
-            listen: true,
-            interimResults: true,
-            debug: true
-        });
+        artyom.fatality();
+        setTimeout(function () {
+            artyom.initialize({
+                lang: "de-DE",
+                continuous: true,
+                listen: true,
+                interimResults: true,
+                debug: true
+            }).then(function () {
+                console.log("Ready!");
+            });
+        }, 250);
     }
     function stopContinuousArtyom() {
         artyom.fatality();
