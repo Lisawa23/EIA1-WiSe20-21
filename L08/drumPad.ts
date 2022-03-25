@@ -71,24 +71,6 @@ const randomButton: HTMLElement = document.querySelector(".fa-random");
 
 let i: number = 0;
 
-//Wechsel Play- und Stop-Button
-playButton.addEventListener("click", function(): void {
-    toggleClasses(this, stopButton);
-    playLoop(true);
-    recordButton.classList.remove("active");
-    recordButton.classList.add("inactive");
-});
-
-stopButton.addEventListener("click", function(): void {
-    toggleClasses(this, playButton);
-    playLoop(false);
-    randomBeat(false);
-});
-
-function toggleClasses(firstHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
-    firstHTMLElement.classList.add("is-hidden");
-    secondHTMLElement.classList.remove("is-hidden");
-}
 
 //Array und Funktion - Intervall
 let beatArray: number [] = [];
@@ -143,11 +125,10 @@ var secInterval: number;
 
 function randomBeat (a: boolean): void {
     if (a == true) {
-        secInterval = setInterval(() => {    
-            for (x = 0; x <= 9; x++) { 
-                leeresArray.push(Math.floor(Math.random() * 10) + 1);
-            }    
-            if (x < leeresArray.length) {
+        secInterval = setInterval(() => {     
+                let randomSound: number = Math.floor(Math.random() * sound.length);
+                leeresArray.push(randomSound);
+                if (x < leeresArray.length) {
                 playSample(leeresArray[x]);
                 x++;
             }
@@ -172,10 +153,30 @@ randomButton.addEventListener("click", function(): void {
 trashButton.addEventListener("click", function(): void {
     stopButton.classList.add("is-hidden");
     playButton.classList.remove("is-hidden");
-    beatArray.length = 0;
-    leeresArray.length = 0;
+    beatArray = [];
+    leeresArray = [];
     randomBeat(false);
 }); 
+
+//Wechsel Play- und Stop-Button
+playButton.addEventListener("click", function(): void {
+    toggleClasses(this, stopButton);
+    playLoop(true);
+    recordButton.classList.remove("active");
+    recordButton.classList.add("inactive");
+});
+
+stopButton.addEventListener("click", function(): void {
+    toggleClasses(this, playButton);
+    playLoop(false);
+    randomBeat(false);
+});
+
+function toggleClasses(firstHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
+    firstHTMLElement.classList.add("is-hidden");
+    secondHTMLElement.classList.remove("is-hidden");
+}
+
 
 //Tasteneingabe
 document.addEventListener("keydown", function(event: KeyboardEvent): void {
@@ -234,8 +235,8 @@ switch (event.key) {
         randomBeat(true);
         break;
     case"r":
-        beatArray.length = 0;
-        leeresArray.length = 0;
+        beatArray = [];
+        leeresArray = [];
         randomBeat(false);
         stopButton.classList.add("is-hidden");
         playButton.classList.remove("is-hidden");

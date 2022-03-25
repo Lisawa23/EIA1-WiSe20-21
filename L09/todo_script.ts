@@ -26,10 +26,10 @@ const countplus: HTMLCollection = document.getElementsByClassName("newtodo");
 function addList(task: string): void {
   let ul: HTMLUListElement = document.querySelector("ul");
   let li: HTMLLIElement = document.createElement("li");
-  li.innerHTML = `<span class="deletetodo"><i class="far delete fa-trash-alt"></span></i><input class="newtodo" type="checkbox"><label class="nameElement">${task}</label>`;
+  li.innerHTML = `<span class="deletetodo"><i class="far delete fa-trash-alt"></span></i><input class="newtodo" type="checkbox"><label class="nameElement">${task}</label>`; //auch ->` + task + ` <- möglich
   ul.appendChild(li);
   li.querySelector(".deletetodo").addEventListener("click", deleteElement);
-
+  
   for (let i: number = 0; i < countplus.length; i ++) { 
     countplus[i].addEventListener("submit", submit);
   }
@@ -48,3 +48,5 @@ function deleteElement(): void {
   this.parentElement.remove(); 
   listnumber();
 }
+
+//https://codepen.io/crimue/pen/wvrzJQP
