@@ -197,11 +197,11 @@ var hard;
         cardsArrayHard.sort(function () {
             return 0.5 - Math.random();
         });
-        for (var i = 0; i < cardsArrayHard.length; i++) {
+        for (var i_1 = 0; i_1 < cardsArrayHard.length; i_1++) {
             var card = document.createElement("img");
             card.setAttribute("src", "images/backside.png");
-            card.setAttribute("data-id", i.toString());
-            card.id = ("cpu-id" + i);
+            card.setAttribute("data-id", i_1.toString());
+            card.id = ("cpu-id" + i_1);
             card.addEventListener("click", flipCard);
             gameBoard.appendChild(card);
         }
