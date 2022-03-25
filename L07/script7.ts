@@ -1,4 +1,5 @@
 //Töne
+namespace L07 {
 const sound: HTMLAudioElement [] = [];
 sound[0] = new Audio('../L07/assets/A.mp3');
 sound[1] = new Audio('../L07/assets/C.mp3');
@@ -65,3 +66,5 @@ setInterval(function() {
    document.querySelector(".play").addEventListener('click', function(){
        Reihenfolge(4,5,8);
    })
+
+}

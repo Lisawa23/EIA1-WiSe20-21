@@ -1,4 +1,6 @@
-interface ToDo {
+namespace L10 {
+
+interface ToDo {                //1 Objekte
     todosText: string;
     todosChecked: boolean;
 }
@@ -41,7 +43,7 @@ function drawListToDOM(): void {
         let todo: HTMLElement = document.createElement("div");
         todo.classList.add("todo");
         todo.innerHTML =  "<span class='check " + toDOint[index].todosChecked + "'><i class='fas fa-check'></i></span>"
-                            + toDOint[index].todosText + "<span class='trash fas fa-trash-alt'></span>";
+                            + toDOint[index].todosText + "<span class='trash fas fa-trash-alt'></span>";                    //1 Einfügen der Objekte
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
         todo.querySelector(".check").addEventListener("click", function(): void {
             toggleCheckState(index);
@@ -58,7 +60,7 @@ function drawListToDOM(): void {
     updateCounter();
 }
 //Funktionen für ANzeige
-function updateCounter(): void {
+function updateCounter(): void {            //2 Counter (open, total, done)
     counterDOMElement.innerHTML = toDOint.length + " in total";
 //To Dos Done oder Open
 //Quelle: https://stackoverflow.com/questions/6120931/how-to-count-certain-elements-in-array
@@ -82,7 +84,7 @@ function updateCounter(): void {
  */
 function addTodo(): void {
     if (inputDOMElement.value != "") {
-        toDOint.unshift({
+        toDOint.unshift({           //1 Einfügen am Anfang
             todosText: inputDOMElement.value,
             todosChecked: false});
         inputDOMElement.value = "";
@@ -111,7 +113,7 @@ function deleteTodo(index: number): void {
 
 declare var Artyom: any; //Herr Rausch sagt any ist bei Artyom erlaubt :)
 
-window.addEventListener("load", function(): void {
+window.addEventListener("load", function(): void {      //2 Artyom anwenden
     var artyom: any = new Artyom(); 
     
     artyom.addCommands({
@@ -150,3 +152,4 @@ window.addEventListener("load", function(): void {
     document.querySelector("#start").addEventListener("click", startContinuousArtyom);
     document.querySelector("#stop").addEventListener("click", stopContinuousArtyom);
 });
+}

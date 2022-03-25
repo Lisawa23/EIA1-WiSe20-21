@@ -59,22 +59,6 @@ var L08;
     var recordButton = document.querySelector(".fa-microphone");
     var randomButton = document.querySelector(".fa-random");
     var i = 0;
-    //Wechsel Play- und Stop-Button
-    playButton.addEventListener("click", function () {
-        toggleClasses(this, stopButton);
-        playLoop(true);
-        recordButton.classList.remove("active");
-        recordButton.classList.add("inactive");
-    });
-    stopButton.addEventListener("click", function () {
-        toggleClasses(this, playButton);
-        playLoop(false);
-        randomBeat(false);
-    });
-    function toggleClasses(firstHTMLElement, secondHTMLElement) {
-        firstHTMLElement.classList.add("is-hidden");
-        secondHTMLElement.classList.remove("is-hidden");
-    }
     //Array und Funktion - Intervall
     var beatArray = [];
     beatArray[0] = 4;
@@ -124,9 +108,8 @@ var L08;
     function randomBeat(a) {
         if (a == true) {
             secInterval = setInterval(function () {
-                for (x = 0; x <= 9; x++) {
-                    leeresArray.push(Math.floor(Math.random() * 10) + 1);
-                }
+                var randomSound = Math.floor(Math.random() * sound.length);
+                leeresArray.push(randomSound);
                 if (x < leeresArray.length) {
                     playSample(leeresArray[x]);
                     x++;
@@ -150,10 +133,26 @@ var L08;
     trashButton.addEventListener("click", function () {
         stopButton.classList.add("is-hidden");
         playButton.classList.remove("is-hidden");
-        beatArray.length = 0;
-        leeresArray.length = 0;
+        beatArray = [];
+        leeresArray = [];
         randomBeat(false);
     });
+    //Wechsel Play- und Stop-Button
+    playButton.addEventListener("click", function () {
+        toggleClasses(this, stopButton);
+        playLoop(true);
+        recordButton.classList.remove("active");
+        recordButton.classList.add("inactive");
+    });
+    stopButton.addEventListener("click", function () {
+        toggleClasses(this, playButton);
+        playLoop(false);
+        randomBeat(false);
+    });
+    function toggleClasses(firstHTMLElement, secondHTMLElement) {
+        firstHTMLElement.classList.add("is-hidden");
+        secondHTMLElement.classList.remove("is-hidden");
+    }
     //Tasteneingabe
     document.addEventListener("keydown", function (event) {
         switch (event.key) {
@@ -211,8 +210,8 @@ var L08;
                 randomBeat(true);
                 break;
             case "r":
-                beatArray.length = 0;
-                leeresArray.length = 0;
+                beatArray = [];
+                leeresArray = [];
                 randomBeat(false);
                 stopButton.classList.add("is-hidden");
                 playButton.classList.remove("is-hidden");
