@@ -22,14 +22,14 @@ var countplus = document.getElementsByClassName("newtodo");
 function addList(task) {
     var ul = document.querySelector("ul");
     var li = document.createElement("li");
-    li.innerHTML = "<span class=\"deletetodo\"><i class=\"far delete fa-trash-alt\"></span></i><input class=\"newtodo\" type=\"checkbox\"><label class=\"nameElement\">" + task + "</label>";
+    li.innerHTML = "<span class=\"deletetodo\"><i class=\"far delete fa-trash-alt\"></span></i><input class=\"newtodo\" type=\"checkbox\"><label class=\"nameElement\">".concat(task, "</label>");
     ul.appendChild(li);
     li.querySelector(".deletetodo").addEventListener("click", deleteElement);
-    for (var i = 0; i < countplus.length; i++) {
-        countplus[i].addEventListener("submit", submit);
+    for (var i_1 = 0; i_1 < countplus.length; i_1++) {
+        countplus[i_1].addEventListener("submit", submit);
     }
-    for (var i = 0; i < countplus.length; i++) {
-        countminus[i].addEventListener("click", deleteElement);
+    for (var i_2 = 0; i_2 < countplus.length; i_2++) {
+        countminus[i_2].addEventListener("click", deleteElement);
     }
     listnumber();
 }

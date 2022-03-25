@@ -56,8 +56,8 @@ function updateCounter() {
     // und : https://stackoverflow.com/questions/51972480/making-a-counter-in-javascript-to-do-app 
     var counterOpen = 0;
     var counterDone = 0;
-    for (var i = 0; i < toDOint.length; i++) {
-        if (toDOint[i].todosChecked == false) {
+    for (var i_1 = 0; i_1 < toDOint.length; i_1++) {
+        if (toDOint[i_1].todosChecked == false) {
             counterOpen++;
         }
         else {
