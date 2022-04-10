@@ -12,7 +12,7 @@ sound[7] = new Audio('../Keyboard/notes/g.mp3');
 sound[8] = new Audio('../Keyboard/notes/af.mp3');
 sound[9] = new Audio('../Keyboard/notes/a.mp3');
 sound[10] = new Audio('../Keyboard/notes/bf.mp3');
-sound[11] = new Audio('../Keyboard/notes/h.mp3');
+sound[11] = new Audio('../Keyboard/notes/b.mp3');
 
 //Funktion
 function playSample(audio:number){
@@ -25,7 +25,7 @@ document.querySelector(".c").addEventListener('click', function(){
     
 })
 
-document.querySelector(".db").addEventListener('click', function(){
+document.querySelector(".df").addEventListener('click', function(){
     playSample(1);
 })
 
@@ -33,7 +33,7 @@ document.querySelector(".d").addEventListener('click', function(){
     playSample(2);
 })
 
-document.querySelector(".eb").addEventListener('click', function(){
+document.querySelector(".ef").addEventListener('click', function(){
     playSample(3);
 })
 
@@ -45,7 +45,7 @@ document.querySelector(".f").addEventListener('click', function(){
     playSample(5);
 })
 
-document.querySelector(".gb").addEventListener('click', function(){
+document.querySelector(".gf").addEventListener('click', function(){
     playSample(6);
 })
 
@@ -61,7 +61,7 @@ document.querySelector(".a").addEventListener('click', function(){
     playSample(9);
 })
 
-document.querySelector(".bb").addEventListener('click', function(){
+document.querySelector(".bf").addEventListener('click', function(){
     playSample(10);
 })
 
@@ -72,16 +72,67 @@ document.querySelector(".h").addEventListener('click', function(){
 
 
 //Intervall
-function Reihenfolge(c:number, d:number, ab:number){
+function Reihenfolge(cf:number, f:number, gf:number){
 setInterval(function() {
-    playSample(c);
-    playSample(d);
-    playSample(ab);
-   }, 500);
+    playSample(cf);
+}, 500);
+setInterval(function() {
+    playSample(f);
+}, 750);
+setInterval(function() {
+    playSample(gf);
+}, 250);
 }
 
    document.querySelector(".play").addEventListener('click', function(){
-       Reihenfolge(0,2,8);
+       Reihenfolge(1,5,6);
    })
 
+
+//Zusatzaufgabe 
+//Tasteneingabe
+document.addEventListener("keydown", function(event: KeyboardEvent): void {
+    switch (event.key) {
+        case "1":
+            playSample(0);
+            break;
+        case "2":
+            playSample(1);
+            break;
+        case "3":
+            playSample(2);
+            break;
+        case "4":
+            playSample(3);
+            break;
+        case "5":
+            playSample(4);
+            break;
+        case "6":
+            playSample(5);
+            break;
+        case "7":
+            playSample(6);
+            break;
+        case "8":
+            playSample(7);
+            break;
+        case "9":
+            playSample(8);
+            break;
+        case"q":
+            playSample(9);
+            break;
+        case"w":
+            playSample(10);
+            break;
+        case"e":
+            playSample(11);
+            break;
+        case"r":
+            Reihenfolge(0,5,8);
+            break;
+        }
+    });
 }
+    

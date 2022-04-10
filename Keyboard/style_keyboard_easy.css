@@ -27,26 +27,15 @@ body{
   opacity: 0.6;
 }
 
-.white{
+.white, .black{
   background-color: white;
   height: 450px;
   width: 100px;
-  z-index: 1;
 }
-
 .black{
   background-color: black;
-  height: 250px;
+  height: 450px;
   width: 50px;
-  margin:0 -30px 0 -30px;
-  z-index: 2;
-}
-li {
-  margin:0;
-  padding:0;
-  list-style:none;
-  position:relative;
-  float:left
 }
 
 
