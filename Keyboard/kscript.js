@@ -56,19 +56,19 @@ var Keyboard;
         playSample(11);
     });
     //Intervall
-    function Reihenfolge(c, f, ab) {
+    function Reihenfolge(cf, f, gf) {
         setInterval(function () {
-            playSample(c);
+            playSample(cf);
         }, 500);
         setInterval(function () {
             playSample(f);
         }, 750);
         setInterval(function () {
-            playSample(ab);
+            playSample(gf);
         }, 250);
     }
     document.querySelector(".play").addEventListener('click', function () {
-        Reihenfolge(0, 5, 8);
+        Reihenfolge(1, 5, 6);
     });
     //Zusatzaufgabe 
     //Tasteneingabe

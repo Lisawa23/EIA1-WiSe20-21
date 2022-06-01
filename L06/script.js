@@ -26,7 +26,7 @@ var L06;
         document.querySelector("#titleRegion").innerHTML = continent;
         document.querySelector(".titleRegion").innerHTML = "Emission absolute of " + continent + " in 2018";
         document.querySelector("#ueberschrift1").innerHTML = newValue.toFixed(2);
-        document.querySelector("#ueberschrift2").innerHTML = ((newValue / Gesamtemission) * 100).toFixed(2) + "%";
+        document.querySelector("#ueberschrift2").innerHTML = (((newValue / Gesamtemission) * 100).toFixed(2)).toString + "%";
         document.querySelector("#ueberschrift3").innerHTML = (((newValue / oldValue) - 1) * 100).toFixed(2) + "%";
         document.querySelector("#ueberschrift4").innerHTML = (newValue - oldValue).toFixed(2) + "";
         document.querySelector(".chart").setAttribute('style', 'height:' + ((newValue / Gesamtemission) * 100) + '%');
