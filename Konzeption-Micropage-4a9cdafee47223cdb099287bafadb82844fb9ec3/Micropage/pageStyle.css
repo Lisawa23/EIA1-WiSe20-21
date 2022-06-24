@@ -1,7 +1,23 @@
+/* https://www.w3schools.com/html/tryit.asp?filename=tryhtml_responsive_media_query3 */
+/* https://kulturbanause.de/blog/responsive-webdesign-und-mobile-first/ */
 
+/* 
+https://codepen.io/sanketbodke/pen/bGRVKYr 
+https://codepen.io/stephanlamoureux/pen/BaNgLLp
+https://codepen.io/raybeezdesign/pen/qBQpdx
+https://codepen.io/matheusalmeida/pen/aeLMMr     footer 
+https://codepen.io/alxtr42/pen/JzZaEP   blöcke für Farben
+https://codepen.io/hashem/pen/RweMwx          blöcke für Farben
+https://codepen.io/zreska/pen/jpYzmY               Schrift im Block
+https://codepen.io/rvelarde/pen/EpKXvj            Für Zielgruppe
+https://codepen.io/StuffieStephie/pen/BNqJVX      Für Nav, Bild und Text
+https://codepen.io/Abby805/pen/xbPyyd              Drehbuch
+https://codepen.io/justincavery/pen/nzLzaB         Bilderslider
+https://wiki.selfhtml.org/wiki/HTML/Tabellen/Responsive_Gestaltung    Tabelle responsive*/
 /*body*/
 body {
     margin: 0 auto;
+    max-width: 100%;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
