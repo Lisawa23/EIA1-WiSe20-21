@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="script.js" defer></script>
+    <title>Startseite</title>
+</head>
+
+<body>
+    <div id="slideout-menu">
+        <ul>
+            <li>
+                <a href="landingpage.html">Startseite</a>
+            </li>
+            <li>
+                <a href="idea.html">Ideenfindung</a>
+            </li>
+            <li>
+                <a href="planning.html">Planung</a>
+            </li>
+            <li>
+                <a href="concept.html">Konzept</a>
+            </li>
+            <li>
+                <a href="product.html">Endprodukt</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li>
+                <a class="not_current" href="landingpage.html">Startseite</a>
+            </li>
+            <li>
+                <a class="not_current" href="idea.html">Ideenfindung</a>
+            </li>
+            <li>
+                <a class="active" href="planning.html">Planung</a>
+            </li>
+            <li>
+                <a class="not_current" href="concept.html">Konzept</a>
+            </li>
+            <li>
+                <a class="not_current" href="product.html">Endprodukt</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="banner">
+        <img src="./Assets/TeaserPic.jpeg" alt="">
+    </div>
+
+    <main>
+        <div class="welcome" id="story">
+            <img src="./Assets/Projektstrukturplan.png" alt="">
+        </div>
+        <!-- https://codepen.io/tarabutler/pen/dopQRb -->
+        <h2 id="time" style="text-align: center;">Zeitstrahl</h2>
+        <div id="timeline-wrap">
+            <div id="timeline"></div>
+            <div class="marker mfirst timeline-icon one">
+                <p>MÄRZ</p>
+            </div>
+            <div class="marker m2 timeline-icon two">
+                <p>APRIL</p>
+            </div>
+            <div class="marker m3 timeline-icon three">
+                <p>MAI</p>
+            </div>
+            <div class="marker m4 timeline-icon four">
+                <p>JUNI</p>
+            </div>
+            <div class="marker mlast timeline-icon five">
+                <p>JULI</p>
+            </div>
+            <div class="timeline-panel hidden">
+                <p class="text text1">text</p>
+                <p class="text text2"></p>
+                <p class="text text3"></p>
+                <p class="text text4"></p>
+            </div>
+        </div>
+        <h2 class="h2">Aufgabenverteilung</h2>
+        <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Szene</th>
+                    <th>Person</th>
+                    <th>Erledigen bis</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sonnenaufgang</td>
+                    <td>Lisa</td>
+                    <td>23.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Tochter beim Frühstück</td>
+                    <td>Mona</td>
+                    <td>23.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Zahn Dialog</td>
+                    <td>Mona</td>
+                    <td>18.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Zahn + Schoki</td>
+                    <td>Lisa</td>
+                    <td>18.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Frühstück von Innen</td>
+                    <td>Mona</td>
+                    <td>26.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Sitzen beim Zahnarzt</td>
+                    <td>Lisa</td>
+                    <td>26.05.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Zähne von Innen mit Instrumenten</td>
+                    <td>Lisa</td>
+                    <td>05.06.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Instrumente von Innen</td>
+                    <td>Mona</td>
+                    <td>05.06.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+                <tr>
+                    <td>Nassspritzen und Meer</td>
+                    <td>Lisa</td>
+                    <td>08.06.2022</td>
+                    <td><input type="checkbox" checked></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+    </main>
+
+    <footer>
+        <div class="footer-content-wrapper">
+            <div class="footer-col large-25 small-50 tiny-100 ta-l flt">
+                <h3>Mona Stingl</h3>
+                <p>MKB-4</p>
+                <p>267315</p>
+            </div>
+            <div class="footer-col large-25 small-50 tiny-100 ta-l flt">
+                <h3>Lisa Waletzko</h3>
+                <p>MKB-4</p>
+                <p>267281</p>
+            </div>
+            <div class="footer-col large-25 small-50 tiny-100 ta-l flt">
+                <h3>Quellen</h3>
+                <a href="./Assets/Quellen.pdf" target="_blank" rel="noopener noreferrer">Quellen</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
