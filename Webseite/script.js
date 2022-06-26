@@ -1,5 +1,4 @@
-var Micropage;
-(function (Micropage) {
+window.addEventListener("load", function () {
     var menuIcon = document.getElementById("menu-icon");
     var slideoutMenu = document.getElementById("slideout-menu");
     menuIcon.addEventListener("click", function () {
@@ -83,5 +82,5 @@ var Micropage;
     document.querySelector(".mlast").addEventListener("mouseout", function () {
         hideBlock.classList.add("hidden");
     });
-})(Micropage || (Micropage = {}));
+});
 //# sourceMappingURL=script.js.map

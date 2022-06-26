@@ -1,4 +1,4 @@
-namespace Micropage {
+window.addEventListener("load", function(): void {
 const menuIcon: HTMLElement = document.getElementById("menu-icon");
 const slideoutMenu: HTMLElement = document.getElementById("slideout-menu");
 
@@ -84,5 +84,4 @@ document.querySelector(".mlast").addEventListener("mouseover", function(): void 
 document.querySelector(".mlast").addEventListener("mouseout", function(): void {
     hideBlock.classList.add("hidden");
   });
-  
-}
+});
