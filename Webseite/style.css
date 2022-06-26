@@ -235,11 +235,10 @@ b {
   max-width: 1200px;
   width: 90%;
   margin: auto;
-  background-color: aqua;
+  background-color: rgb(145, 221, 221);
 }
 #film {
   padding: 50px 0;
-  background: #f5f5f7;
 }
 
 .filmst{
@@ -260,9 +259,12 @@ width: 21%;
 /* Comedy */
 #comedy{
   margin:  0;
-  background-image: url(./Assets/background.png);
+  background-image: url(./Assets/comedy.jpg);
   background-repeat: no-repeat; 
   background-size: cover;
+}
+#comedy p{
+  opacity: 1;
 }
 .call-outs-container {
   max-width: 1200px;
@@ -277,9 +279,9 @@ width: 21%;
 }
 
 /* ZIELGRUPPE */
-#group .call-out:nth-child(4) {background-color: #ccb9da;}
-#group .call-out:nth-child(2) {background-color: #cdf1c3;}
-#group .call-out:nth-child(3) {background-color: #ccb9da;}
+#group .call-out:nth-child(4) {background-color: #eda4ff;}
+#group .call-out:nth-child(2) {background-color: #fdff8b;}
+#group .call-out:nth-child(3) {background-color: #eda4ff;}
 
 /* Message */
 .message{
@@ -658,7 +660,10 @@ button {
 .pro:hover{
   opacity: 100%;
 }
-
+/* Teaser */
+.teaser{
+  width: 100%;
+}
 /* Moodboard */
 #banner2 img{
   width: 60%;
