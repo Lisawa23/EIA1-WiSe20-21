@@ -6,7 +6,7 @@ body {
     margin: auto;
   }
 
-  p {
+  p, li {
     line-height: 1.5;
     font-size: 1.2rem;
   }
@@ -173,6 +173,12 @@ b {
   margin: auto;
 }
 
+.container2{
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
 /* ......//about us//...... */
 
 #about {
@@ -233,7 +239,7 @@ b {
 
 .container1 {
   max-width: 1200px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: rgb(145, 221, 221);
 }
@@ -357,27 +363,7 @@ footer {
   width: 60%;
   justify-content: center;
 }
-/* Weitere Ideen */
-#more{
-  background-color: #ccb9da;
-}
-#more .call-out:nth-child(1) {background-color: #7ee058;}
-#more .call-out:nth-child(2) {background-color: #ff9742;}
-#more .call-out:nth-child(3) {background-color: #fff34a;}
-#more .call-out:nth-child(4) {background-color: #b934ee;}
-#more .call-out:nth-child(5) {background-color: #5552ff;}
 
-#more h3{
-  text-align: center;
-}
-.call-out2 {
-  padding: 20px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  flex-basis: 45%;
-}
-#more .call-out2:nth-child(1) {background-color: #dbdbdb;}
-#more .call-out2:nth-child(2) {background-color: #dbdbdb;}
 
 /* Ablauf */
 .praxis-img img {
@@ -535,7 +521,7 @@ td:nth-child(4) {
 }
 /* sixth example */
 .equal-height-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
 }
@@ -673,6 +659,45 @@ button {
   padding-bottom: 20px;
 }
 
+
+/* Farben */
+.mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 25px;
+  }
+  .mytabs input[type="radio"] {
+  display: none;
+  }
+  .mytabs label {
+  padding: 25px;
+  background: #e2e2e2;
+  font-weight: bold;
+  }
+  .mytabs .tab {
+  width: 100%;
+  padding: 20px;
+  order: 1;
+  display: none;
+  }
+  .mytabs .tab h4 {
+  font-size: 3em;
+  }
+  .mytabs input[type='radio']:checked + label + .tab {
+  display: block;
+  }
+  .mytabs input[type="radio"]:checked + label {
+  background: #fff;
+  }
+.colo{
+  text-align: center;
+}
+.message p{
+  width: 700px;
+}
+
 /* Media Queries */
 @media (max-width: 900px) {
   body{
@@ -789,7 +814,9 @@ button {
     border-style: none;
   }
   
-
+  .message p {
+    width: 170px;
+}
   /* Storyboard */
   .container5{
     width: 100%;
@@ -826,6 +853,10 @@ button {
   .pro:hover{
     opacity: 100%;
   }
+  .mytabs label {
+    padding: 3px;
+    }
+  
 }
 
 @media (max-width: 600px) {
@@ -847,10 +878,13 @@ button {
   footer {
     background-color: #c0c0c0;
     width: 100%;
-    height: 100px;
+    height: 110px;
     padding-bottom: 10px;
     color: white;
     margin: 0;
+  }
+  .f{
+    height: 140px;
   }
   .footer-col p {
     display: block;
