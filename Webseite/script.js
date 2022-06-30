@@ -1,6 +1,7 @@
 window.addEventListener("load", function () {
     var menuIcon = document.getElementById("menu-icon");
     var slideoutMenu = document.getElementById("slideout-menu");
+    var time = document.querySelector(".mfirst");
     menuIcon.addEventListener("click", function () {
         if (slideoutMenu.style.opacity == "1") {
             slideoutMenu.style.opacity = "0";
@@ -12,7 +13,7 @@ window.addEventListener("load", function () {
         }
     });
     var hideBlock = document.querySelector(".timeline-panel");
-    document.querySelector(".mfirst").addEventListener("mouseover", function () {
+    time.addEventListener("mouseover", function () {
         var text = document.querySelector(".text1");
         var text2 = document.querySelector(".text2");
         var text3 = document.querySelector(".text3");

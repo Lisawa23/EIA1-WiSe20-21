@@ -1,6 +1,7 @@
 window.addEventListener("load", function(): void {
 const menuIcon: HTMLElement = document.getElementById("menu-icon");
 const slideoutMenu: HTMLElement = document.getElementById("slideout-menu");
+let time: HTMLElement = document.querySelector(".mfirst");
 
 menuIcon.addEventListener("click", function (): void {
   if (slideoutMenu.style.opacity == "1") {
@@ -13,8 +14,8 @@ menuIcon.addEventListener("click", function (): void {
 });
 
 
-let hideBlock: HTMLElement = document.querySelector(".timeline-panel");
-document.querySelector(".mfirst").addEventListener("mouseover", function(): void {
+let hideBlock: HTMLElement = <HTMLElement>document.querySelector(".timeline-panel");
+time.addEventListener("mouseover", function(): void {
     let text: HTMLElement = document.querySelector(".text1");
     let text2: HTMLElement = document.querySelector(".text2");
     let text3: HTMLElement = document.querySelector(".text3");
