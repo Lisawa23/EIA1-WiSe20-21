@@ -1,0 +1,337 @@
+html{
+  overflow-x: hidden;
+}
+body {
+    font-family: "Roboto", sans-serif;
+  }
+  main {
+    margin: 0 auto;
+  }
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  nav {
+    height: 72px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 0;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+  .main-nav {
+    background: #f4f4f4;
+    width: 100%;
+    margin-top: -8px;
+}
+  nav a {
+    padding: 0 32px;
+    color: #a0a0a0;
+    transition: 0.4s;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .active {
+    color: #000000;
+  }
+  
+  #menu-icon {
+    height: 100%;
+    font-size: 28px;
+    padding: 0 4px;
+    color: rgb(0, 0, 0);
+    display: none;
+    align-items: center;
+  }
+ /* Slideout Menu */
+
+ #slideout-menu {
+    display: none;
+    background: #2d3436;
+    z-index: 100;
+    position: fixed;
+    transition: 0.4s;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+    opacity:0;
+    pointer-events:none;
+  }
+  
+  #slideout-menu ul {
+    list-style: none;
+    padding: 0 32px;
+  }
+  
+  #slideout-menu ul li {
+    padding: 8px;
+  }
+  
+  #slideout-menu a {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    color: white;
+  }
+  
+  #slideout-menu input {
+    width: 85%;
+    padding: 8px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .container {
+    margin: auto;
+    max-width: 50%;
+}
+.intro {
+  padding: 105px 0px 70px 0px;
+  overflow-x:hidden
+}
+.intro img {
+  width: 81px;
+  height: 81px;
+  border-radius:99px;
+  float: left;
+}
+.intro .wrap {
+  margin:30px 0px;
+}
+
+
+.intro p{
+  color: #4e4e4e;
+}
+.intro h1 span {
+  font-size:47px;
+}
+.unit-80 h1{
+  left: 40px;
+}
+.section.second {
+  margin-bottom: 90px
+}
+
+.section
+.container {
+  position: relative
+}
+
+.section .container:after {
+  content: url(./Assets/separator.png);
+  left:20px
+}
+
+.section .container h1 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative
+}
+
+
+ .units-split .unit-80 {
+  margin-left: 0;
+  
+}
+.intro h1:before {
+  /* Edit this with your name or anything else */
+  content: 'LISA';
+  font-family: "Playfair Display SC",serif;
+}
+.intro h1:before {
+  position: absolute;
+  left: -120px;
+  top: -135px;
+  font-size: 270px;
+  z-index: -1;
+  color:#f4f4f4
+}
+
+.work .work-list {
+  margin-left:0px
+}
+
+.work .work-list li {
+  list-style: none;
+  font-size: 0.9375em;
+  color:#8c8c8c
+}
+
+.work .work-list li a {
+  padding-bottom: 5px;
+  font-size: 1.1875em;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom:1px solid #b3b3b3
+}
+
+.work .work-list li a:hover {
+  border-bottom:1px solid #333
+}
+
+ul{
+  margin-bottom: 1.65em;
+  margin-left: 0px;
+  padding: 0;
+  line-height: 1.65em;
+}
+
+/* skills */
+.skill-section{
+  position: relative;
+  margin: 100px 0;
+}
+
+.heading{
+  text-align: center;
+  font-size: 60px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 100px;
+}
+
+
+.dashboard {
+  display: flex;
+  place-items: center;
+  width: 110%;
+  float: left;
+}
+
+svg {
+  width: 114px;
+  height: 114px;
+  margin: 1em;
+}
+
+.bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #1A2C34;
+}
+
+[class^="meter-"] {
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  
+}
+.percent{
+  float: left;
+  padding-right: 5%;
+  padding-left: 4%;
+
+}
+.per{
+  width: 120%;
+  height: 100px;
+}
+.meter-1 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  stroke: #b3b3b3;
+  animation: progress-1 1s ease-out;
+}
+.meter-2 {
+  stroke: #b3b3b3;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 80;
+  animation: progress-2 .75s ease-out;
+}
+.meter-3 {
+  stroke: #b3b3b3;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 120;
+  animation: progress-3 .5s ease-out;
+}
+.meter-4 {
+  stroke: #b3b3b3;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 120;
+  animation: progress-3 .5s ease-out;
+}
+.meter-5 {
+  stroke: #b3b3b3;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 150;
+  animation: progress-3 .5s ease-out;
+}
+
+@keyframes progress-1 {
+    from {
+        stroke-dashoffset: 360;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes progress-2 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes progress-3 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 250;
+  }
+}
+
+    @media (max-width: 900px) {
+        body{
+          overflow-x: hidden;
+        }
+        nav ul {
+          display: none;
+        }
+      
+        #menu-icon {
+          display: flex;
+        }
+      
+        #slideout-menu {
+          display: block;
+        }
+      .dashboard{
+        flex-direction: column;
+      }
+      .percent{
+            float: left;
+    padding-right: 5%;
+    padding-left: 4%;
+    margin-top: -200px;
+      }
+    }
