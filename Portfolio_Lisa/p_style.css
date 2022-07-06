@@ -142,7 +142,7 @@ a {
 
 .section .container:after {
   content: url(./Assets/separator.png);
-  left:20px
+  left:20px;
 }
 
 .section .container h1 {
@@ -218,7 +218,7 @@ ul{
 .dashboard {
   display: flex;
   place-items: center;
-  width: 110%;
+  width: 27%;
   float: left;
 }
 
@@ -244,13 +244,14 @@ svg {
 }
 .percent{
   float: left;
-  padding-right: 5%;
+  padding-right: 8%;
   padding-left: 4%;
 
 }
 .per{
   width: 120%;
   height: 100px;
+  display: block;
 }
 .meter-1 {
   stroke-dasharray: 360;

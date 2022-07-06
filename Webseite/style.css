@@ -265,7 +265,7 @@ width: 21%;
 /* Comedy */
 #comedy{
   margin:  0;
-  background-image: url(./Assets/comedy.jpg);
+  background-image: url(./Assets/background.png);
   background-repeat: no-repeat; 
   background-size: cover;
 }
