@@ -1,7 +1,9 @@
 html{
-  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
 }
 body {
+  overflow-x: hidden;
     font-family: "Roboto", sans-serif;
   }
   main {
@@ -102,6 +104,68 @@ a {
     font-size: 20px;
     text-align: center;
   }
+
+  /* footer */
+
+.footer-content-wrapper {
+  width: 100%;
+  margin: auto;  
+  transform: translateX(12%);
+}
+
+.footer-col {
+  display: inline-block;
+  padding: 0.5em 0em 0.5em 1em;
+  box-sizing: border-box;
+  border-right: solid 1px rgb(75, 75, 75);
+}
+.footer-col:nth-child(3) {
+  border: none;
+}
+.flt:nth-child(3):after {
+  content: " "; 
+  visibility: hidden; 
+  display: block; 
+  height: 1em; 
+  clear: both;
+}
+
+.ta-l {
+  text-align: left;
+}
+.flt {
+  float: left;
+}
+
+
+.large-25 {
+  width: 25%;
+  text-align: center;
+}
+
+.footer-col a {
+  display: block;
+  margin: 0.3em ;
+}
+.footer-col a:hover {
+  color: #a0a0a0;
+}
+.footer-col p {
+  display: block;
+  margin: 0.3em ;
+  color: #000000;
+  font-size:15px;
+}
+
+footer {
+  background-color: #c0c0c0;
+  width: 100%;
+  height: 170px;
+  padding-top: 20px;
+  color: white;
+  margin: 0;
+}
+/* Intro */
 
   .container {
     margin: auto;
@@ -284,6 +348,107 @@ svg {
   animation: progress-3 .5s ease-out;
 }
 
+.drawtext{
+  padding-top: 300px;
+}
+.introDrawings{
+  float: left;
+  width: 350px;
+}
+.drawings{
+  width: 100%;
+  height: 500px;
+  background-color: #000000;
+  padding-top: 100px;
+}
+.drawings h2{
+  color: #fff;
+  padding: 50px 0 0 100px;
+  font-size: 50px;
+  font-weight: 100;
+}
+.drawings h1{
+  color: #fff;
+  padding: 0 0 0 100px;
+  font-size: 50px;
+}
+.d1{
+  width: 30%;
+  float: right;
+  padding-right: 40%;
+}
+
+/* bilderslider */
+/*Bilderslider  https://frontendscript.com/html-slideshow-code-without-javascript/ */
+* {
+  padding: 0;
+  list-style-type:none;
+  }
+  
+  .thumb {
+    height:140px;
+    width:210px;
+    top:136px;
+    left:12px;
+    position:relative;
+    background-size:contain;
+    box-shadow:-12px 0 0 12px #000;
+  }
+  .thumb:last-of-type {
+    box-shadow:0 0 0 12px #000;
+  }
+  .thumb:after {
+    content:attr(title);
+    font:normal normal 20pt 'impact';
+    position:relative;
+  }
+  .thumb:hover {
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
+    filter: grayscale(80%);
+    filter: url(grayscale.svg#greyscale);
+    filter: gray;
+  }
+a.prev,a.next {
+  height:91px;
+  position:absolute;
+  width:43px;
+  top:50%;
+  margin-top:-30px;
+  opacity:0.6;
+  text-indent:-99999px;
+  cursor:pointer;
+}
+a.prev:hover,a.next:hover {
+  opacity:1;
+}
+.prev {
+  left:0;
+  background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
+}
+.next {
+  right:0;
+  background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;
+}
+.slider {
+  height:95vh;
+  position: relative;
+}
+.slide {
+  position:absolute;
+  width: 90%;
+}
+.slider .slide:target {
+  z-index: 10;
+}
+.slider img {
+  max-width:100%;
+  width:100%;
+  left:20px;
+}
+
 @keyframes progress-1 {
     from {
         stroke-dashoffset: 360;
@@ -311,7 +476,14 @@ svg {
   }
 }
 
-    @media (max-width: 900px) {
+    @media (max-width: 400px) {
+       
+        main {
+          width: 100%;
+        }
+        html {
+          font-size: 85%;
+        }
         body{
           overflow-x: hidden;
         }
@@ -322,17 +494,86 @@ svg {
         #menu-icon {
           display: flex;
         }
-      
+        .container{
+          max-width: 80%;
+        }
+      h1{
+        font-size: 18px;
+      }
+      .intro h1 span {
+        font-size:22px;
+      }
         #slideout-menu {
           display: block;
         }
       .dashboard{
         flex-direction: column;
+        width: 100%;
+        margin-left: 30px;
       }
       .percent{
             float: left;
     padding-right: 5%;
     padding-left: 4%;
-    margin-top: -200px;
+    margin-top: -100px;
+      }
+      .intro h1:before {
+        font-size: 150px;
+        padding-left: 40px;
+        padding-top: 50px;
+      }
+      .small-50 {
+        width: 25%;  
+      }
+      footer {
+        background-color: #c0c0c0;
+        width: 100%;
+        height: 110px;
+        padding-bottom: 10px;
+        color: white;
+        margin: 0;
+      }
+      .f{
+        height: 140px;
+      }
+      .footer-col p {
+        display: block;
+        margin: 0.3em ;
+        color: #000000;
+        font-size: 10px;
+      }
+      .drawings h2{
+        padding: 30px 0 0 50px;
+        font-size: 30px;
+      }
+      .drawings h1{
+        padding: 0 0 0 50px;
+        font-size: 30px;
+      }
+      .drawings{
+        width: 100%;
+        height: 200px;
+        padding-top: 30px;
+      }
+      .d1{
+        width: 50%;
+        float: right;
+        padding-right: 40%;
+      }
+      .drawtext{
+        padding-top: 150px;
+      }
+      .introDrawings{
+        float: left;
+        width: 300px;
+      }
+      .section.second {
+        margin-bottom: 45px
+      }
+      .slide{
+        width: 100%;
+      }
+      .slider{
+        height: 50vh;
       }
     }
