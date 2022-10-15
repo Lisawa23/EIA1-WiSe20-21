@@ -1,0 +1,48 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: grey;
+}
+
+
+/* command-k-c */
+/* oder command + / */
+
+#square{
+  
+  float: left;
+  text-align: center;
+  border-radius: 10px;
+  border: double;
+}
+
+#square:hover{
+  opacity: 0.6;
+}
+
+.white, .black{
+  background-color: white;
+  height: 450px;
+  width: 100px;
+}
+.black{
+  background-color: black;
+  height: 450px;
+  width: 50px;
+}
+
+
+.play:hover{
+  opacity: 0.6;
+}
+
+.play{
+  margin-left: 35%;
+}

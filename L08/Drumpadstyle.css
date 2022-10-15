@@ -1,0 +1,106 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../L08/hintergrund.jpg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#drums{
+  width: 500px;
+  height: 500px;
+  position:flex;
+}
+
+#square{
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+  border-radius: 10px;
+  border: double;
+}
+
+#square:hover{
+  opacity: 0.6;
+}
+
+.square1{
+  background: linear-gradient(to top, #530007, #ffc8d4);
+}
+.square2{
+  background: linear-gradient(to top,#9e010e, #ffbbbb);
+}
+.square3{
+  background: linear-gradient(to top,#9e003d, #fabad8);
+}
+.square4{
+  background: linear-gradient(to top,#000b4b, #b9b3f8);
+}
+.square5{
+  background: linear-gradient(to top,#020096, #c5b6ff);
+}
+.square6{
+  background: linear-gradient(to top,#005f70, #d2f3fc);
+}
+.square7{
+  background: linear-gradient(to top,#00330b, #bbffca);
+}
+.square8{
+  background: linear-gradient(to top,#1b8501, #ceffbb);
+}
+.square9{
+  background: linear-gradient(to top,#c4c400, #f5ffbb);
+}
+
+.button{
+  width: 500px;
+  height: 10px;
+  margin-top: 105%;
+}
+
+.fas{
+  cursor: pointer;
+  color: #2b2929e1;
+  font-size: 50px;
+  margin-left: 13%;
+}
+
+.fa-play, .fa-stop{
+  margin-left: 10%;
+}
+
+.is-hidden{
+  display: none !important;
+}
+
+.active{
+  color: #646161;
+}
+
+.trash:hover, .random:hover{
+  opacity:0.6;
+}
+
+.keyboard{
+  margin-left: 38%;
+  margin-top: 5%;
+}
+
+.key{
+  cursor: pointer;
+  color: #2b2929e1;
+  font-size: 50px;
+  margin-left: 11%;
+  float: left;
+  z-index: 0;
+}
+
+h1{
+  margin-left: 7%;
+}
