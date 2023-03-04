@@ -26,11 +26,11 @@
 }
 
 .back {
-    background: #f1f1f1;
+    background: #d6f8ff;
     transform: perspective(600px) rotateY(180deg);
 }
 .back-content {
-    color: #2c3e50;
+    color: #000000;
     text-align: center;
     width: 100%;
 }
