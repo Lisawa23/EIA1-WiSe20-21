@@ -35,10 +35,10 @@
     width: 100%;
 }
 
-.card:hover > .front {
+.card:active > .front {
  transform: perspective(600px) rotateY(-180deg);
 }
 
-.card:hover > .back {
+.card:active > .back {
   transform: perspective(600px) rotateY(0deg);  
 }
