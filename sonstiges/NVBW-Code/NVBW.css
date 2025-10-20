@@ -26,8 +26,10 @@
 }
 
 .back {
-    background: #d6f8ff;
+    background: #d9dee8;
     transform: perspective(600px) rotateY(180deg);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
 }
 .back-content {
     color: #000000;
